@@ -117,8 +117,11 @@
 
 
 @media screen and (max-width: 769px) {
-  .bathroom .intro-cont{
-    padding-top: 173px;
+  .basement .intro-cont{
+    padding-top: 68px;
+  }
+  .basement .subheading{
+    display: none !important;
   }
 
 }
