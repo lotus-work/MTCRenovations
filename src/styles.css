@@ -18,9 +18,9 @@ html {
 body {
     font-family: 'Spectral', serif;
     --navbar-scroll: transparent;
-    --navbar-scroll-text: #000;
+    --navbar-scroll-text: white;
     --navbar-scroll-shadow: none;
-    --navlink-scroll-text: #000;
+    --navlink-scroll-text: white;
 }
 
 
