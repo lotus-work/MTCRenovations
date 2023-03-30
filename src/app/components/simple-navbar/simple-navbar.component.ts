@@ -39,9 +39,9 @@ export class SimpleNavbarComponent {
        
      }else if(window.scrollY < scrollHeigth){
        document.body.style.setProperty('--navbar-scroll', "transparent");
-       document.body.style.setProperty('--navbar-scroll-text', "white");
+       document.body.style.setProperty('--navbar-scroll-text', "black");
        document.body.style.setProperty('--navbar-scroll-shadow', "none");
-       document.body.style.setProperty('--navlink-scroll-text', "#ffffffe7");
+       document.body.style.setProperty('--navlink-scroll-text', "black");
        this.logo = "../../../assets/img/logo.png";
     
      }

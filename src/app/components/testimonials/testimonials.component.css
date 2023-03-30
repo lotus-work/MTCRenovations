@@ -1,0 +1,30 @@
+
+/* testimonials */
+
+.testimonials{
+    padding: 60px 0;
+    background-color: #c0202f;
+}
+.testimonials .apps-card{
+    box-shadow: rgba(99, 99, 99, 0.623) 0px 2px 8px 0px;
+    width: 100%;
+   
+}
+
+.testimonials .right-content .title, .text {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials .right-content .title:before {
+    color: #c0202f;
+    content: "❝";
+    font-size: 140px;
+    font-weight: 700;
+    position: absolute;
+    opacity: 0.5;
+    top: -0.2em;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}

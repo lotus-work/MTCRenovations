@@ -1,0 +1,212 @@
+.overlay-text {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80);
+      height: 783px;
+      background-attachment: fixed;
+      background-position:top;
+      object-fit: cover;
+      background-repeat: no-repeat; */
+  
+      background-image: linear-gradient(to top, rgba(1, 1, 1, 0.477), rgba(60, 57, 57, 0.241)), url(../../../assets/img/painting/our-work/virtual-tour-318929-mls-high-res-image-43.jpg);
+      height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: image 10s infinite alternate;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 769px) {
+  
+    .overlay-text {
+  
+      height: 100%;
+  
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: image 15s infinite alternate;
+      width: 100%;
+    }
+
+    @keyframes image {
+      0% {
+        /* background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.849)), url(../../../assets/landingimg1.jpg)  no-repeat center center fixed; */
+        background-image: linear-gradient(to top, rgba(1, 1, 1, 0.477), rgba(60, 57, 57, 0.241)), url(../../../assets/img/painting/our-work/virtual-tour-333305-mls-high-res-image-21.jpg);
+  
+      }
+  
+      100% {
+        background-image: linear-gradient(to top, rgba(1, 1, 1, 0.477), rgba(60, 57, 57, 0.241)), url(../../../assets/img/painting/our-work/virtual-tour-318929-mls-high-res-image-43.jpg);
+  
+      }
+    }
+  }
+  
+  
+  /* bathroom-intro */
+  .bathroom-intro {
+    padding: 60px 0;
+  }
+  
+  
+  
+  
+  .bathroom .overlay-text .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: .5;
+  }
+  
+  .bathroom .overlay-text .award img {
+    /* background: rgba(0, 0, 0, 0.745); */
+    background: #fff;
+  }
+  
+  .bathroom .overlay-text h1 {
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.1;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 69px;
+  
+    font-family: 'Oswald', sans-serif;
+  
+  }
+  
+  .bathroom .overlay-text h1 span {
+    padding-top: 10px;
+    font-size: 10vw;
+    display: block;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+  
+  }
+  
+  .bathroom .overlay-text .subheading {
+    color: white;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+    line-height: normal;
+    letter-spacing: 1px;
+    font-size: 40px;
+  }
+  
+  @media (max-width: 480px) {
+    .bathroom .overlay-text h1 {
+      font-size: 35px;
+    }
+  
+    .bathroom .overlay-text .subheading {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .bathroom .overlay-text h1 {
+      font-size: 25px;
+    }
+  
+    .bathroom .overlay-text .subheading {
+      font-size: 17px;
+    }
+  }
+
+  
+@media screen and (max-width: 769px) {
+  .bathroom .intro-cont{
+    padding-top: 173px;
+  }
+
+}
+  
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .scroll-down span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .scroll-down span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  .scroll-down span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+  }
+  
+  
+  
+  .get-quote-form {
+    background: #f8f8f8;
+    border: 1px #eee solid;
+  }
+  
+  
+  /* how-it-works */
+  .how-it-works {
+    padding: 0 0 60px 0;
+  }
+  
+
+  
+/* READY TO GET STARTED */
+
+.ready-to-get-started {
+  background-color: #000;
+  
+  padding-top: 30px;
+}
+
+
+.phone-red a {
+  background: -webkit-linear-gradient(#e16521, #bf1e2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.ready-to-get-started img {
+  width: 500px;
+  padding-top: -20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ready-to-get-started img {
+    width: 350px;
+  }
+}

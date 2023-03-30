@@ -1,0 +1,25 @@
+.navbar-section{
+    background: #f8f9fa;
+    padding: 160px 0 60px 0;  
+    color: #000;
+    
+}
+.navbar-section h1{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 98px;
+}
+.navbar-section h2{
+    text-transform: capitalize;
+    font-size: 38px;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 797px) {
+    .navbar-section h1{
+        font-size: 58px;
+    }
+    .navbar-section h2{
+        font-size: 22px;
+    }
+  }

@@ -1,0 +1,25 @@
+
+/* our-approach */
+.our-approach{
+    padding: 60px 0;
+    background-color: #000;
+}
+.our-approach .approach-box{
+    height: 100%;
+    padding: 20px 20px 10px;
+   
+}
+
+
+/* mtc-distinction */
+
+.mtc-distinction {
+    padding: 60px 0;
+    background: #fff;
+  }
+  
+  .mtc-distinction hr {
+    color: black;
+  }
+  
+  

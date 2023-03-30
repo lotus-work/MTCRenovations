@@ -1,465 +1,460 @@
 <app-simple-navbar></app-simple-navbar>
 <section class="basement">
-    <div class="container-fluid overlay-text vh-100 d-flex justify-content-center align-items-center">
-        <div class="row d-flex justify-content-center align-items-center " data-scrollax-parent="true"
-            style="height: 793px;">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-left">
-                <h1 class="mb-4">Basement Renovations</h1>
-                <h2 class="subheading mb-4">Transform Your Basement into a Stunning Living Space with Our Expert
-                    Renovation Services !</h2>
-                <a href="#services">
-                    <div class="scroll-down">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </a>
+  <div class="container-fluid overlay-text vh-100 d-flex justify-content-center align-items-center">
+    <div class="row d-flex justify-content-center align-items-center intro-cont" data-scrollax-parent="true">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-left">
+        <h1 class="mb-4">Basement Renovations</h1>
+        <h2 class="subheading mb-4">Transform Your Basement into a Stunning Living Space with Our Expert
+          Renovation Services !</h2>
+        <a href="#services">
+          <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
+        <div class="get-quote-form p-4">
+          <form #getaQuoteForm="ngForm" (ngSubmit)="quoteFormData(getaQuoteForm)" class="needs-validation"
+            novalidate="">
+            <div class="text-center">
+              <h4>GET A QUOTE TODAY</h4>
+              <p>Free in-home estimate!</p>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
-                <div class="get-quote-form p-4">
-                    <form novalidate="" class="needs-validation ng-untouched ng-pristine ng-invalid">
-                        <div class="text-center">
-                            <h4>GET A QUOTE TODAY</h4>
-                            <p>Free in-home estimate!</p>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-sm-12">
-                                <div class="form-floating mb-3"><input type="text" id="floatingInput" name="yourName"
-                                        ngmodel="" required=""
-                                        class="form-control ng-untouched ng-pristine ng-invalid"><label
-                                        for="floatingInput">Your Name</label></div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-floating mb-3"><input type="email" id="floatingInput" name="email"
-                                        ngmodel="" required=""
-                                        class="form-control ng-untouched ng-pristine ng-invalid"><label
-                                        for="floatingInput">Email</label></div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-floating mb-3"><input type="tel" name="phoneNumber" id="phoneNumber"
-                                        ngmodel="" required="" class="form-control ng-untouched ng-pristine ng-invalid"
-                                        inputmode="text"><label for="floatingInput">Phone Number</label></div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="row">
-                                    <div class="col-sm-6 col-12">
-                                        <div class="form-floating mb-3">
-                                            <input type="text" id="floatingInput" name="address" ngmodel="" required=""
-                                                class="form-control ng-untouched ng-pristine ng-invalid"><label
-                                                for="floatingInput">Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-12">
-                                        <div class="form-floating mb-3"><select name="serviceReq" id="floatingSelect"
-                                                aria-label="Floating label select example" required=""
-                                                class="form-select">
-                                                <option value="Basement" class="ng-star-inserted">
-                                                    Basement</option>
-                                                <option value="Bathroom" class="ng-star-inserted">
-                                                    Bathroom</option>
-                                                <option value="Kitchen" class="ng-star-inserted">Kitchen
-                                                </option>
-                                                <option value="Roofing" class="ng-star-inserted">
-                                                    Roofing</option>
-                                                <option value="Flooring/Stairs" class="ng-star-inserted"> Home
-                                                    Flooring/Stairs</option>
-                                                <option value="Painting" class="ng-star-inserted">Painting
-                                                </option>
-                                                <option value="Windows" class="ng-star-inserted">Windows</option>
-                                                <option value="Window Coverings" class="ng-star-inserted"> Window
-                                                    Coverings
-                                                </option>
-                                                <option value="Other" class="ng-star-inserted">
-                                                    Other</option>
-                                            </select><label for="floatingSelect">Renovation
-                                                Required</label></div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <button type="submit" class="btn btn-vary1 mt-3" disabled="">Get
-                                a Quote</button>
-                        </div>
-                    </form>
+            <div class="row g-3">
+              <div class="col-sm-12 ">
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" name="yourName" #yourNameRef="ngModel"
+                    ngModel required />
+                  <label for="floatingInput">Your Name</label>
+
                 </div>
+                <div *ngIf="yourNameRef.errors && (yourNameRef.dirty || yourNameRef.touched)"
+                  style="text-align:left; color:red;">
+                  <div [hidden]="!yourNameRef.errors">
+                    <p>&nbsp;Your Name is mandatory</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 ">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" name="email" #emailAdderssRef="ngModel"
+                    ngModel required />
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div *ngIf="emailAdderssRef.errors && (emailAdderssRef.dirty || emailAdderssRef.touched)"
+                  style="text-align:left; color:red;">
+                  <div [hidden]="!emailAdderssRef.errors">
+                    <p>&nbsp;Email is mandatory</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 ">
+
+                <div class="form-floating mb-3">
+
+                  <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" #phoneNumberRef="ngModel"
+                    ngModel [inputMask]="quotePhoneNumberInputMask" required>
+                  <label for="floatingInput">Phone Number</label>
+                </div>
+                <div *ngIf="phoneNumberRef.errors && (phoneNumberRef.dirty || phoneNumberRef.touched)"
+                  style="text-align:left; color:red;">
+                  <div [hidden]="!phoneNumberRef.errors">
+                    <p>&nbsp;Phone Number is mandatory</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-6 col-12">
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="floatingInput" ngx-google-places-autocomplete [options]="options"
+                        (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
+                        required="" />
+                      <label for="floatingInput">Address</label>
+
+                    </div>
+                    <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
+                      style="text-align:left; color:red;">
+                      <div [hidden]="!addressRef.errors">
+                        <p>&nbsp;Address is mandatory</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-12">
+                    <div class="form-floating mb-3">
+
+                      <select class="form-select " name="serviceReq" id="floatingSelect"
+                        aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
+
+                        <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
+                          [selected]="opt.status == true">
+                          {{opt.label}}</option>
+                      </select>
+                      <label for="floatingSelect">Renovation Required</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid">Get a
+                Quote</button>
             </div>
+
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="about bg-light">
-    <!-- Two column: Fluid image left, contained text right -->
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
-
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute left-half h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                    <h1>Basement Renovations</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>MTC Renovations suggests that you talk to a professional designer to make a practical plan
-                            for
-                            your renovation that fits your needs and budget. They have a team of installation experts
-                            who
-                            will work hard to make sure that your custom bathroom design is built on time and on budget.
-                        </p>
-                        <p>Our latest work :</p>
-                        <ul>
-                            <li><a href="">Recreation <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a> </li>
-                            <li><a href="">Offices <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a></li>
-                            <li><a href="">Fully Functional Living Space <span class="fs-6 ps-1"><i
-                                            class="fa fa-external-link" aria-hidden="true"></i></span></a></li>
-                            <li><a href="">Sauna and Workout Space <span class="fs-6 ps-1"><i
-                                            class="fa fa-external-link" aria-hidden="true"></i></span></a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Two column: Fluid image right, contained text left -->
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
-
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute right-half h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 py-5 pe-lg-5">
-                    <h1>Bathroom Renovations</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>Meet with a design expert to plan the perfect bathroom renovation for your family’s home and
-                            get a quote on your project. Working together, we will create a convenient renovation
-                            schedule that suits your specific needs and requirements. Our installation experts will get
-                            to work making your custom bathroom design a reality, staying on schedule and under budget.
-                        </p>
-                        <p>Our latest work :</p>
-                        <ul>
-                            <li><a href="">Vanities <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a></li>
-                            <li><a href="">Custom Showers <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a></li>
-                            <li><a href="">Tiles <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a></li>
-                            <li><a href="">Fixtures <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                                            aria-hidden="true"></i></span></a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mtc-distinction">
+  <!-- Two column: Fluid image left, contained text right -->
+  <div class="container-fluid position-relative half-fluid">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="header-section pb-3">
-                    <h3 class="title">The MTC Distinction</h3>
-                    <hr>
-                </div>
-                <h1>We make your desires come true. The professionals at MTC Renovations offer high-quality cellar
-                    finishing services throughout the Greater Toronto Area and its environs. We promise that you will be
-                    happy with the work we do for you, and we do high-quality work at prices you can afford.</h1>
-            </div>
+      <div class="row">
+
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute left-half h-100">
+          <div class="image"></div>
         </div>
+
+        <!-- Text -->
+        <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+          <h1>Basement Renovations</h1>
+
+          <div class="fs-5 pt-3">
+            <p>MTC Renovations suggests that you talk to a professional designer to make a practical plan
+              for
+              your renovation that fits your needs and budget. They have a team of installation experts
+              who
+              will work hard to make sure that your custom bathroom design is built on time and on budget.
+            </p>
+            <p>Our latest work :</p>
+            <ul>
+              <li><a href="">Recreation <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a> </li>
+              <li><a href="">Offices <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+              <li><a href="">Fully Functional Living Space <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+              <li><a href="">Sauna and Workout Space <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Two column: Fluid image right, contained text left -->
+  <div class="container-fluid position-relative half-fluid">
+    <div class="container">
+      <div class="row">
+
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute right-half h-100">
+          <div class="image"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-6 py-5 pe-lg-5">
+          <h1>Bathroom Renovations</h1>
+
+          <div class="fs-5 pt-3">
+            <p>Meet with a design expert to plan the perfect bathroom renovation for your family’s home and
+              get a quote on your project. Working together, we will create a convenient renovation
+              schedule that suits your specific needs and requirements. Our installation experts will get
+              to work making your custom bathroom design a reality, staying on schedule and under budget.
+            </p>
+            <p>Our latest work :</p>
+            <ul>
+              <li><a href="">Vanities <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+              <li><a href="">Custom Showers <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+              <li><a href="">Tiles <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+              <li><a href="">Fixtures <span class="fs-6 ps-1"><i class="fa fa-external-link"
+                      aria-hidden="true"></i></span></a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="our-approach">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center">
-                <div class="header-section pb-3">
-                    <h3 class="title">OUR APPROACH</h3>
-                </div>
-            </div>
+<section class="see-our-work">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="header-section pb-3">
+          <h3 class="title">See our Work</h3>
         </div>
-        <div class="row g-3">
-            <div class="col-xl-6 col-md-12 col-12">
-                <div class="approach-box bg-uniform pt-3 px-3 pt-md-5 px-md-5 text-left text-white ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Identifying Your Requirements</h1>
-                        <p class="fs-5">Before starting any project, you should do a lot of research to make sure it
-                            will be a success. We take into consideration your desires for your basement living space.
-                            Do you want to create a gathering place for friends and family, such as a bar or
-                            entertainment area? Are you interested in a wine cellar, home gym, or home theater? Or
-                            perhaps you need a pantry or guest room? If you're looking for an apartment that generates
-                            income, we can help you with that too. Contact us, and we will start turning your vision
-                            into reality.</p>
-                    </div>
 
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-12 col-12">
-                <div class="approach-box bg-light pt-3 px-3 pt-md-5 px-md-5 text-left ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Design Center Consultation</h1>
-                        <p class="fs-5 fst-italic">Virtual Design Consultation</p>
-                        <p class="fs-5">
-                            Our experienced designers will look at your wish list and our extensive knowledge of
-                            basement design to come up with the most creative and useful 3D designs for your basement.
-                            You will have the opportunity to make adjustments in real-time, bringing your vision to
-                            life. They will give a full rundown of all the features and parts that come with our
-                            all-in-one package of high-quality building materials. Once the design is perfect, we will
-                            present the complete agreement and payment structure. We also provide affordable financing
-                            options.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-12 col-md-12 col-12">
-                <div class="approach-box bg-uniform pt-3 px-3 pt-md-5 px-md-5 text-left text-white ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Early-Stage Inspection</h1>
-                        <p class="fs-5 fst-italic">Walk-Through Technical Inspection (Site Visit)</p>
-                        <p class="fs-5">
-                            Our designer and project manager will look at your space and design idea, as well as the
-                            layout of the plumbing, electrical, and mechanical systems. We will keep track of any
-                            changes or decisions made since the virtual design appointment that need to be made to the
-                            design. All of this information will be used to create the final design, which will serve as
-                            the construction project's manual.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-5 col-md-12 col-12">
-                <div class="approach-box bg-light pt-3 px-3 pt-md-5 px-md-5 text-left  ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Choose Finishes</h1>
-
-                        <p class="fs-5">Our designers will help you choose from a wide range of premium finishes and
-                            add-ons to make your basement look and feel like you.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-7 col-md-12 col-12">
-                <div class="approach-box bg-uniform pt-3 px-3 pt-md-5 px-md-5 text-left text-white ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">The Build</h1>
-
-                        <p class="fs-5">Once your project manager is assigned, we are ready to begin. All materials
-                            needed for your project will be delivered and stored in a clean, secure environment. If
-                            needed, we can arrange for a storage container to be brought to your property. Our CC staff
-                            and your project manager will provide regular updates throughout the construction process.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-12 col-12">
-                <div class="approach-box bg-light pt-3 px-3 pt-md-5 px-md-5 text-left ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Finishing the Project</h1>
-                        <p class="fs-5 fst-italic">Project Completion</p>
-                        <p class="fs-5">
-                            We guarantee your complete satisfaction. Our devoted handymen will promptly take care of any
-                            minor issues as a result of our warranty and commitment to you. We take pride in our work
-                            and love to capture photos of the completed project.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-6 col-md-12 col-12">
-                <div class="approach-box bg-uniform pt-3 px-3 pt-md-5 px-md-5 text-left  text-white ">
-                    <div class="my-3 py-3">
-                        <h1 class="fw-bold">Satisfied Clients</h1>
-                        <p class="fs-5 fst-italic">Add Your Name To Our Long List Of Happy Customers. </p>
-                        <p class="fs-5">See our Google Reviews of hundreds of happy clients if you don't believe us. In
-                            actuality, more than any of our rivals. We would be honored if you chose us to complete your
-                            basement renovation project because we give you the MTC Difference.</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+      </div>
     </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-4 col-md-4 col-12">
+        <img src="../../../assets/img/basement/our-work/virtual-tour-327738-50.jpg" width="100%" alt="" srcset="">
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 ">
+        <img src="../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-9.jpg" width="100%"
+          alt="" srcset="">
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 ">
+        <img src="../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-6.jpg" width="100%"
+          alt="" srcset="">
+      </div>
+      <a href="" class="btn btn-vary1 mt-3 col-lg-3 col-4">More</a>
+    </div>
+  </div>
 
 </section>
+
+
+
+<section class="our-process">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col ">
+        <div class="home-warrany-icon">
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center white text-uppercase">
+        <h3>5 Year</h3>
+        <h1>Basebord to Baseboard Warranty</h1>
+        <h3>Warranty</h3>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-3 ">
+      <div class="col-11 bg-white py-5">
+        <h1 class="text-center text-uppercase">Our Process</h1>
+        <div class="row justify-content-around fs-5 ">
+          <div class="col-lg-2 col-md-6 col-12 text-center border-end">
+            <span class="process__number">1</span>
+            <p>Video Consultation</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 text-center border-end">
+            <span class="process__number">2</span>
+            <p>Select Finishes</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 text-center border-end">
+            <span class="process__number">3</span>
+            <p>Site Visit</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 text-center border-end">
+            <span class="process__number">4</span>
+            <p>The Build</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12 text-center">
+            <span class="process__number">5</span>
+            <p>Project Complete</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <section class="our-services">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center">
-                <div class="header-section pb-3">
-                    <h3 class="title">OUR SERVICES</h3>
-                </div>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <div class="header-section pb-3">
+          <h3 class="title">OUR SERVICES</h3>
         </div>
+      </div>
     </div>
-      <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+  </div>
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute left-half-one h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                    <h1>Basement Renovations</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>We provide complete basement renovation services to transform your basement into a functional and attractive living space.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute left-half-one h-100">
+          <div class="image"></div>
         </div>
-    </div>
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+        <!-- Text -->
+        <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+          <h1>Basement Renovations</h1>
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute right-half-two h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 py-5 pe-lg-5">
-                    <h1>Drywall</h1>
-
-                    <div class="fs-5 pt-3">
-                       <p>Our skilled drywall installers focus on delivering complete satisfaction to every client with their professional work.</p>
-                    </div>
-                </div>
-            </div>
+          <div class="fs-5 pt-3">
+            <p>We provide complete basement renovation services to transform your basement into a functional and
+              attractive living space.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute left-half-three h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                    <h1>Taping</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>WWe use high-quality taping techniques to provide a smooth finish, ensuring a level of excellence that you will take pride in.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute right-half-two h-100">
+          <div class="image"></div>
         </div>
-    </div>
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+        <!-- Text -->
+        <div class="col-lg-6 py-5 pe-lg-5">
+          <h1>Drywall</h1>
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute right-half-four h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 py-5 pe-lg-5">
-                    <h1>Painting</h1>
-
-                    <div class="fs-5 pt-3">
-                       <p>Our basement construction packages include all necessary painting services, such as wall priming, ceiling painting, and molding painting, delivered with professionalism and excellence.</p>
-                    </div>
-                </div>
-            </div>
+          <div class="fs-5 pt-3">
+            <p>Our skilled drywall installers focus on delivering complete satisfaction to every client with their
+              professional work.</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute left-half-five h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                    <h1>Tiling</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>Our professional tile installers handle shower, bathroom, and kitchenette tiling, delivering high-quality work.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute left-half-three h-100">
+          <div class="image"></div>
         </div>
-    </div>
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
+        <!-- Text -->
+        <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+          <h1>Taping</h1>
 
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute right-half-six h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 py-5 pe-lg-5">
-                    <h1>Plumbing</h1>
-
-                    <div class="fs-5 pt-3">
-                       <p>We employ professional plumbing experts who prioritize customer satisfaction with their work.</p>
-                    </div>
-                </div>
-            </div>
+          <div class="fs-5 pt-3">
+            <p>We use high-quality taping techniques to provide a smooth finish, ensuring a level of excellence that you
+              will take pride in.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
 
-    <div class="container-fluid position-relative half-fluid">
-        <div class="container">
-            <div class="row">
-
-                <!-- Image -->
-                <div class="col-lg-6 position-lg-absolute left-half-seven h-100">
-                    <div class="image"></div>
-                </div>
-
-                <!-- Text -->
-                <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                    <h1>Electrical</h1>
-
-                    <div class="fs-5 pt-3">
-                        <p>Our skilled electrical contractors ensure complete satisfaction with their professional workmanship.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute right-half-four h-100">
+          <div class="image"></div>
         </div>
-    </div>
 
-   
+        <!-- Text -->
+        <div class="col-lg-6 py-5 pe-lg-5">
+          <h1>Painting</h1>
+
+          <div class="fs-5 pt-3">
+            <p>Our basement construction packages include all necessary painting services, such as wall priming, ceiling
+              painting, and molding painting, delivered with professionalism and excellence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
+
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute left-half-five h-100">
+          <div class="image"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+          <h1>Tiling</h1>
+
+          <div class="fs-5 pt-3">
+            <p>Our professional tile installers handle shower, bathroom, and kitchenette tiling, delivering high-quality
+              work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
+
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute right-half-six h-100">
+          <div class="image"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-6 py-5 pe-lg-5">
+          <h1>Plumbing</h1>
+
+          <div class="fs-5 pt-3">
+            <p>We employ professional plumbing experts who prioritize customer satisfaction with their work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container position-relative half-fluid">
+    <div class="container">
+      <div class="row">
+
+        <!-- Image -->
+        <div class="col-lg-6 position-lg-absolute left-half-seven h-100">
+          <div class="image"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+          <h1>Electrical</h1>
+
+          <div class="fs-5 pt-3">
+            <p>Our skilled electrical contractors ensure complete satisfaction with their professional workmanship.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-testimonials></app-testimonials>
+<!-- SCHEDULE AN ESTIMATE -->
+
+
+<app-contact-us></app-contact-us>
+<section class="landing-help">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mb-lg-0 mb-4">
+        <div class="header-section">
+          <h3 class="title white">Schedule an Estimate</h3>
+          <h2 class="small-title white">Get started with your basement renovation project by scheduling an estimate with
+            us today.</h2>
+          <h3 class="title phone-red"><span><a href="tel:1(647) 5601095">+ 1(647) 5601095</a></span></h3>
+          <a href="" class="btn btn-vary1 mt-3">Get
+            a Quote</a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12"><img src="../../../assets/img/call-person.png" alt="">
+      </div>
+    </div>
+  </div>
 </section>

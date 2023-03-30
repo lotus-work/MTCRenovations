@@ -18,14 +18,19 @@ html {
 body {
     font-family: 'Spectral', serif;
     --navbar-scroll: transparent;
-    --navbar-scroll-text: white;
+    --navbar-scroll-text: #000;
     --navbar-scroll-shadow: none;
-    --navlink-scroll-text: #ffffffe7;
+    --navlink-scroll-text: #000;
 }
 
 
+.white {
+    color: #ffff;
+  }
+
+
 .bg-uniform{
-    background: #bf1e2e;
+    background: #c0202f;
      /* linear-gradient(to right, #e16521, #bf1e2e); */
 }
 

@@ -1,0 +1,23 @@
+/* about-us-info */
+.about-us-info{
+    padding: 60px 0;
+}
+.hiring{
+    padding: 0 0 60px 0;
+}
+.hiring .core-values{
+border-top: 2px solid #fff;
+}
+
+/* IDEAL CANDIATE */
+
+.ideal-candidate {
+    padding: 0 0 60px 0;
+}
+.ideal-candidate img{
+    height: 250px;
+   
+}
+.ideal-candidate p{
+   padding: 10px 0 0 0;
+}

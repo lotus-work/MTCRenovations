@@ -1,0 +1,24 @@
+
+/* project-financing */
+.project-financing{
+    padding: 60px 0;
+}
+.accordion .accordion-button {
+    font-size: 20px;
+    background-color: #bf1e2e;
+    color: #fff;
+}
+.accordion-item{
+    margin-bottom: 15px;
+}
+
+.accordion-button:not(.collapsed) {
+background-color: #bf1e2e;
+color: #fff;
+}
+.accordion-button::after {
+    /* background-image: url(); */
+}
+.accordion-button:not(.collapsed)::after {
+    /* background-image: url(); */
+}
