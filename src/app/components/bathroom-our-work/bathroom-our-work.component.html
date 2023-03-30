@@ -2,32 +2,36 @@
 <app-page-intro head="Our Work" subhead="Our Bathroom Renovation Portfolio"></app-page-intro>
 
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4 mb-3" *ngFor="let image of images">
-      <div class="card">
-        <img [src]="image.url" class="card-img-top" (click)="openModal(image.url)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<section class="gallery">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-3" *ngFor="let image of images">
+        <div class="card">
+          <img [src]="image.url" class="card-img-top" (click)="openModal(image.url)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header white">
-        <h5 class="modal-title" id="exampleModalLabel">Our Bathroom Renovation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header white">
+          <h5 class="modal-title" id="exampleModalLabel">Our Basement Renovation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{selectedImage}}" width="100%" alt="" srcset="">
+        </div>
+       
       </div>
-      <div class="modal-body">
-        <img src="{{selectedImage}}" width="100%" alt="" srcset="">
-      </div>
-     
     </div>
   </div>
-</div>
+</section>
+
+
 
 
 
