@@ -23,6 +23,9 @@ body {
     --navlink-scroll-text: #000;
 }
 
+p{
+    text-align: justify;
+}
 
 .white {
     color: #ffff;
