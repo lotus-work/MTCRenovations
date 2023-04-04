@@ -54,6 +54,7 @@ import { BathroomGetFreeQuoteComponent } from './components/bathroom-get-free-qu
 import { KitchenGetFreeQuoteComponent } from './components/kitchen-get-free-quote/kitchen-get-free-quote.component';
 import { PaintingGetFreeQuoteComponent } from './components/painting-get-free-quote/painting-get-free-quote.component';
 import { FlooringGetFreeQuoteComponent } from './components/flooring-get-free-quote/flooring-get-free-quote.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +100,8 @@ import { FlooringGetFreeQuoteComponent } from './components/flooring-get-free-qu
     BathroomGetFreeQuoteComponent,
     KitchenGetFreeQuoteComponent,
     PaintingGetFreeQuoteComponent,
-    FlooringGetFreeQuoteComponent
+    FlooringGetFreeQuoteComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,
