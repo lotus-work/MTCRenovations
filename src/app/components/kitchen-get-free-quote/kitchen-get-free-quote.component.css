@@ -6,3 +6,18 @@
     background: #f8f8f8;
     border: 1px #eee solid;
 }
+
+
+/* FORM */
+#renovationReq{
+    padding-top: 10px;
+  }
+  #renovationReq i{
+  font-size: 14px;
+  color:rgb(218, 33, 33);
+  }
+  
+  #renovationReq span{
+    background-color:rgba(11, 241, 26, 0.085);
+    margin-top: 5px;
+  }

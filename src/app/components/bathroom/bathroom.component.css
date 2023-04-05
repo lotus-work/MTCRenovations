@@ -121,16 +121,24 @@
   }
 }
 
+
 @media screen and (max-width: 769px) {
- 
   .bathroom .intro-cont{
     padding-top: 68px;
   }
-  .bathroom .subheading{
+  .bathroom .get-quote-form{
     display: none !important;
   }
+ 
 
 }
+
+@media screen and (min-width: 769px) {
+  .bathroom .free-quote-modal{
+    display: none !important;
+  }
+}
+
 
 .scroll-down {
   position: absolute;
@@ -212,4 +220,18 @@
   .ready-to-get-started img {
     width: 350px;
   }
+}
+
+/* FORM */
+#renovationReq{
+  padding-top: 10px;
+}
+#renovationReq i{
+font-size: 14px;
+color:rgb(218, 33, 33);
+}
+
+#renovationReq span{
+  background-color:rgba(11, 241, 26, 0.085);
+  margin-top: 5px;
 }

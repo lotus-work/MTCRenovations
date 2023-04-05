@@ -35,6 +35,10 @@ import { PaintingOurWorkComponent } from './components/painting-our-work/paintin
 import { PaintingWhyUsComponent } from './components/painting-why-us/painting-why-us.component';
 import { PaintingComponent } from './components/painting/painting.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
+import { PaintingCareerComponent } from './components/painting-career/painting-career.component';
+import { FlooringCareerComponent } from './components/flooring-career/flooring-career.component';
+import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
+import { BathroomCareerComponent } from './components/bathroom-career/bathroom-career.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -55,6 +59,7 @@ const routes: Routes = [
   {path: 'bathroom/why-mtc', component: BathroomWhyUsComponent},
   {path: 'bathroom/our-work', component: BathroomOurWorkComponent},
   {path: 'bathroom/get-free-quote', component: BathroomGetFreeQuoteComponent},
+  { path: 'bathroom/careers', component: BathroomCareerComponent},
 
   {path: 'kitchen', component: KitchenComponent},
   {path: 'kitchen/about-us', component: KitchenAboutUsComponent},
@@ -62,6 +67,7 @@ const routes: Routes = [
   {path: 'kitchen/how-it-works', component: KitchenHowItWorksComponent},
   {path: 'kitchen/our-work', component: KitchenOurWorkComponent},
   {path: 'kitchen/get-free-quote', component: KitchenGetFreeQuoteComponent},
+  { path: 'kitchen/careers', component: KitchenCareerComponent},
 
   {path: 'flooring', component: FlooringComponent},
   {path: 'flooring/about-us', component: FlooringAboutUsComponent},
@@ -69,6 +75,7 @@ const routes: Routes = [
   {path: 'flooring/how-it-works', component: FlooringHowItWorksComponent},
   {path: 'flooring/our-work', component: FlooringOurWorkComponent},
   {path: 'flooring/get-free-quote', component: FlooringGetFreeQuoteComponent},
+  {path: 'flooring/careers', component: FlooringCareerComponent},
 
   {path: 'painting', component: PaintingComponent},
   {path: 'painting/about-us', component: PaintingAboutUsComponent},
@@ -76,6 +83,7 @@ const routes: Routes = [
   {path: 'painting/how-it-works', component: PaintingHowItWorksComponent},
   {path: 'painting/our-work', component: PaintingOurWorkComponent},
   {path: 'painting/get-free-quote', component: PaintingGetFreeQuoteComponent},
+  { path: 'painting/careers', component: PaintingCareerComponent}
 ];
 
 @NgModule({

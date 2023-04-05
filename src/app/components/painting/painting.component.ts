@@ -19,7 +19,7 @@ export class PaintingComponent {
     componentRestrictions: { country: 'CA' }
   }
   
-  selectedServiceRequiredGetQuote: string = '';
+  selectedServiceRequiredGetQuote: any = [];
 
   fullAddress: string = "";
 
@@ -33,8 +33,20 @@ export class PaintingComponent {
     mask: '(999) 999-9999',
   });
   selectChangeHandler1(event: any) {
-    this.selectedServiceRequiredGetQuote = event.target.value;
+    // this.selectedServiceRequiredGetQuote = event.target.value;
+    this.selectedServiceRequiredGetQuote.push(event.target.value);
+    console.log(this.selectedServiceRequiredGetQuote);
   }
+
+  removeRev(indexNumber: number, indexVal:string) {
+    
+    if(this.selectedServiceRequiredGetQuote[indexNumber] == indexVal)
+    {
+     this.selectedServiceRequiredGetQuote.splice(indexNumber,1);
+    }
+    console.log(this.selectedServiceRequiredGetQuote);
+ 
+   }
    
   handleAddressChange(address: Address) {
     this.fullAddress = address.formatted_address;
@@ -42,11 +54,12 @@ export class PaintingComponent {
   }
   
   getAQuoteServicesReq = [
-    { id: 1, label: "Basement", status: true },
-    { id: 2, label: "Bathroom", status: false },
-    { id: 3, label: "Kitchen", status: false },
-    { id: 4, label: "Flooring/Stairs", status: false },
-    { id: 5, label: "Painting", status: false }
+    { id: 1, label: "Choose From Below", status: true },
+    { id: 2, label: "Basement", status: false },
+    { id: 3, label: "Bathroom", status: false },
+    { id: 4, label: "Kitchen", status: false },
+    { id: 5, label: "Flooring/Stairs", status: false },
+    { id: 6, label: "Painting", status: false }
   ];
 
   constructor(private spinner: NgxSpinnerService, private http: HttpClient, private _getaquote: GetAQuoteService, private _toast: NgToastService) {

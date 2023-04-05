@@ -14,13 +14,13 @@
           </div>
         </a>
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
-        <div class="get-quote-form p-4">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
+        <div class="get-quote-form p-4 text-center">
           <form #getaQuoteForm="ngForm" (ngSubmit)="quoteFormData(getaQuoteForm)" class="needs-validation"
             novalidate="">
-            <div class="text-center">
-              <h4>GET A FREE QUOTE TODAY</h4>
-              <p>Free in-home estimate!</p>
+            <div class="text-center mb-3">
+              <h4>GET A FREE ESTIMATES TODAY</h4>
+
             </div>
 
             <div class="row g-3">
@@ -39,7 +39,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 ">
+              <div class="col-sm-6 col-12">
 
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="floatingInput" name="email" #emailAdderssRef="ngModel"
@@ -53,7 +53,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 ">
+              <div class="col-sm-6 col-12">
 
                 <div class="form-floating mb-3">
 
@@ -69,43 +69,51 @@
                 </div>
               </div>
 
-              <div class="col-sm-12">
-                <div class="row">
-                  <div class="col-sm-6 col-12">
-                    <div class="form-floating mb-3">
-                      <input class="form-control" id="floatingInput" ngx-google-places-autocomplete [options]="options"
-                        (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
-                        required="" />
-                      <label for="floatingInput">Address</label>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="floatingInput" ngx-google-places-autocomplete [options]="options"
+                    (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
+                    required="" />
+                  <label for="floatingInput">Address</label>
 
-                    </div>
-                    <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
-                      style="text-align:left; color:red;">
-                      <div [hidden]="!addressRef.errors">
-                        <p>&nbsp;Address is mandatory</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-12">
-                    <div class="form-floating mb-3">
-
-                      <select class="form-select " name="serviceReq" id="floatingSelect"
-                        aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
-
-                        <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
-                          [selected]="opt.status == true">
-                          {{opt.label}}</option>
-                      </select>
-                      <label for="floatingSelect">Renovation Required</label>
-                    </div>
-
+                </div>
+                <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
+                  style="text-align:left; color:red;">
+                  <div [hidden]="!addressRef.errors">
+                    <p>&nbsp;Address is mandatory</p>
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid">GET A FREE QUOTE</button>
+
+              <div class="col-12">
+                <div class="form-floating mb-3">
+
+                  <select class="form-select " name="serviceReq" id="floatingSelect"
+                    aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
+
+                    <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
+                      [selected]="opt.status == true" [disabled]="opt.label == 'Choose From Below'">
+                      {{opt.label}}</option>
+                  </select>
+                  <div id="renovationReq">
+                    <span class="pe-2 me-2" *ngFor="let revReq of this.selectedServiceRequiredGetQuote; let ind = index"
+                      id="removeRev{{ind}}" id="">{{revReq}} <i class="fa fa-trash" aria-hidden="true"
+                        (click)="removeRev(ind,revReq)"></i></span>
+                  </div>
+
+                  <label for="floatingSelect">Renovation(s) Required</label>
+
+                </div>
+
+              </div>
+              <button type="submit" class="btn btn-vary1 mt-1" [disabled]="!getaQuoteForm.form.valid">GET A FREE
+                ESTIMATES</button>
             </div>
 
           </form>
+        </div>
+        <div class="free-quote-modal">
+          <a href="basement/get-free-quote"  class="btn btn-vary1 ">Free consultation</a>
         </div>
       </div>
     </div>
@@ -130,21 +138,17 @@
           <div class="fs-5 pt-3">
             <p>MTC Renovations suggests that you talk to a professional designer to make a practical plan
               for
-              your renovation that fits your needs and budget. They have a team of installation experts
+              your renovation that fits your needs and budget. We have a team of installation experts
               who
-              will work hard to make sure that your custom bathroom design is built on time and on budget.
+              will work hard to make sure that your custom basement design is built on time and on budget.
             </p>
             <p>Our latest work :</p>
             <ul>
-              <li><a href="basement/our-work">Recreation <span class="fs-6 ps-1"><i class="fa fa-external-link"
+              <li><a href="basement/our-work?filter=recreation-offices">Recreation & Offices<span class="fs-6 ps-1"><i class="fa fa-external-link"
                       aria-hidden="true"></i></span></a> </li>
-              <li><a href="basement/our-work">Offices <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                      aria-hidden="true"></i></span></a></li>
-              <li><a href="basement/our-work">Fully Functional Living Space <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                      aria-hidden="true"></i></span></a></li>
-              <li><a href="basement/our-work">Sauna and Workout Space <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                      aria-hidden="true"></i></span></a></li>
-            </ul>
+             <li><a href="basement/our-work?filter=living-space">Fully Functional Living Space <span class="fs-6 ps-1"><i
+                      class="fa fa-external-link" aria-hidden="true"></i></span></a></li>
+              </ul>
 
           </div>
         </div>
@@ -168,21 +172,17 @@
 
           <div class="fs-5 pt-3">
             <p>Meet with a design expert to plan the perfect bathroom renovation for your family’s home and
-              GET A FREE QUOTE on your project. Working together, we will create a convenient renovation
+              GET A FREE ESTIMATES on your project. Working together, we will create a convenient renovation
               schedule that suits your specific needs and requirements. Our installation experts will get
               to work making your custom bathroom design a reality, staying on schedule and under budget.
             </p>
             <p>Our latest work :</p>
             <ul>
-              <li><a href="bathroom/our-work">Vanities <span class="fs-6 ps-1"><i class="fa fa-external-link"
+              <li><a href="bathroom/our-work?filter=vanities">Vanities <span class="fs-6 ps-1"><i class="fa fa-external-link"
                       aria-hidden="true"></i></span></a></li>
-              <li><a href="bathroom/our-work">Custom Showers <span class="fs-6 ps-1"><i class="fa fa-external-link"
+              <li><a href="bathroom/our-work?filter=showers-fixtures">Custom Showers & Fixtures <span class="fs-6 ps-1"><i class="fa fa-external-link"
                       aria-hidden="true"></i></span></a></li>
-              <li><a href="bathroom/our-work">Tiles <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                      aria-hidden="true"></i></span></a></li>
-              <li><a href="bathroom/our-work">Fixtures <span class="fs-6 ps-1"><i class="fa fa-external-link"
-                      aria-hidden="true"></i></span></a></li>
-            </ul>
+             </ul>
 
           </div>
         </div>
@@ -233,7 +233,7 @@
     <div class="row">
       <div class="col text-center white text-uppercase">
         <h3>5 Year</h3>
-        <h1>Basebord to Baseboard Warranty</h1>
+        <h1>Baseboard to Baseboard Warranty</h1>
         <h3>Warranty</h3>
       </div>
     </div>
@@ -247,7 +247,7 @@
           </div>
           <div class="col-lg-2 col-md-6 col-12 text-center border-end">
             <span class="process__number">2</span>
-            <p class="text-center" >Select Finishes</p>
+            <p class="text-center">Select Finishes</p>
           </div>
           <div class="col-lg-2 col-md-6 col-12 text-center border-end">
             <span class="process__number">3</span>
@@ -447,8 +447,8 @@
           <h3 class="title white">Schedule an Estimate</h3>
           <h2 class="small-title white">Get started with your basement renovation project by scheduling an estimate with
             us today.</h2>
-          <h3 class="title phone-red"><span><a href="tel:1(647) 5601095">+ 1(647) 5601095</a></span></h3>
-          <a href="bathroom/get-free-quote" class="btn btn-vary1 mt-3">GET A FREE QUOTE</a>
+          <h3 class="title phone-red"><span><a href="tel:1(647) 5601095">(647) 560-1095</a></span></h3>
+          <a href="basement/get-free-quote" class="btn btn-vary1 mt-3">GET A FREE ESTIMATES</a>
         </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12"><img src="../../../assets/img/call-person.png" alt="">

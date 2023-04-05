@@ -55,6 +55,10 @@ import { KitchenGetFreeQuoteComponent } from './components/kitchen-get-free-quot
 import { PaintingGetFreeQuoteComponent } from './components/painting-get-free-quote/painting-get-free-quote.component';
 import { FlooringGetFreeQuoteComponent } from './components/flooring-get-free-quote/flooring-get-free-quote.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
+import { BathroomCareerComponent } from './components/bathroom-career/bathroom-career.component';
+import { FlooringCareerComponent } from './components/flooring-career/flooring-career.component';
+import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
+import { PaintingCareerComponent } from './components/painting-career/painting-career.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +105,11 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
     KitchenGetFreeQuoteComponent,
     PaintingGetFreeQuoteComponent,
     FlooringGetFreeQuoteComponent,
-    CopyrightComponent
+    CopyrightComponent,
+    BathroomCareerComponent,
+    FlooringCareerComponent,
+    KitchenCareerComponent,
+    PaintingCareerComponent
   ],
   imports: [
     BrowserModule,

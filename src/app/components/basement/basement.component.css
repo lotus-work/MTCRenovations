@@ -45,8 +45,6 @@
 }
 
 
-
-
 .basement .overlay-text .overlay {
   position: absolute;
   top: 0;
@@ -120,10 +118,17 @@
   .basement .intro-cont{
     padding-top: 68px;
   }
-  .basement .subheading{
+  .basement .get-quote-form{
     display: none !important;
   }
+ 
 
+}
+
+@media screen and (min-width: 769px) {
+  .basement .free-quote-modal{
+    display: none !important;
+  }
 }
 
 .scroll-down {
@@ -428,4 +433,18 @@
 .landing-help img {
   width: 100%;
   padding-top: -20px;
+}
+
+/* FORM */
+#renovationReq{
+  padding-top: 10px;
+}
+#renovationReq i{
+font-size: 14px;
+color:rgb(218, 33, 33);
+}
+
+#renovationReq span{
+  background-color:rgba(11, 241, 26, 0.085);
+  margin-top: 5px;
 }
