@@ -39,8 +39,6 @@ export class FlooringOurWorkComponent {
     { url: '../../../assets/img/flooring/our-work/IMG_1374.jpg', caption: 'Image 7' },
     { url: '../../../assets/img/flooring/our-work/IMG_2369.jpg', caption: 'Image 8' },
     { url: '../../../assets/img/flooring/our-work/IMG_7319.jpg', caption: 'Image 9' },
-    { url: '../../../assets/img/flooring/our-work/IMG_7334.jpg', caption: 'Image 10' },
-    { url: '../../../assets/img/flooring/our-work/IMG_7514.jpg', caption: 'Image 11' },
     { url: '../../../assets/img/flooring/our-work/screenshot-1.png', caption: 'Image 14' },
     { url: '../../../assets/img/flooring/our-work/screenshot-2.png', caption: 'Image 15' },
     { url: '../../../assets/img/flooring/our-work/screenshot-3.png', caption: 'Image 16' },
