@@ -125,3 +125,9 @@ a {
 .more-about-info p{
     text-align: left !important;
 }
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .free-consult-button{
+        display: none;
+    }
+  }
