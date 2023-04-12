@@ -82,10 +82,10 @@ export class BasementOurWorkComponent {
         { url: '../../../assets/img/basement/our-work/screenshot-3.png', caption: 'Image 3' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-49.jpg', caption: 'Image 23' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-50.jpg', caption: 'Image 24' },
-        { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-46.jpg', caption: 'Image 32' },
-        { url: '../../../assets/img/basement/our-work/IMG_1374.jpg', caption: 'Image 32' },
-       
         
+    { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-45.jpg', caption: 'Image 31' },
+        
+    { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-38.jpg', caption: 'Image 28' }
       ];
     }
 
