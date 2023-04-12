@@ -45,7 +45,6 @@ export class BathroomOurWorkComponent {
     { url: '../../../assets/img/bathroom/our-work/IMG_1366.jpg', caption: 'Image 1' },
     { url: '../../../assets/img/bathroom/our-work/IMG_1367.jpg', caption: 'Image 2' },
     { url: '../../../assets/img/bathroom/our-work/IMG_2350.jpg', caption: 'Image 3' },
-    { url: '../../../assets/img/bathroom/our-work/IMG_7315.jpg', caption: 'Image 4' },
     { url: '../../../assets/img/bathroom/our-work/IMG_7316.jpg', caption: 'Image 5' },
     { url: '../../../assets/img/bathroom/our-work/IMG_7332.jpg', caption: 'Image 6' },
     { url: '../../../assets/img/bathroom/our-work/IMG_7334.jpg', caption: 'Image 7' },
