@@ -192,7 +192,10 @@
   
   /* how-it-works */
   .how-it-works {
-    padding: 0 0 60px 0;
+    padding: 80px 0;
+    background: url(http://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/bgn-industries.png);
+    background-position: center;
+    background-size: contain;
   }
   
 
@@ -200,9 +203,11 @@
 /* READY TO GET STARTED */
 
 .ready-to-get-started {
-  background-color: #000;
-  
-  padding: 30px 0;
+  background-color: #ffffff;
+  padding: 80px 0;
+  border-top: 1px solid #f7f7f7;
+  background: url(https://agmpainting.com/excelAssets/Painting_cta_half.jpg) no-repeat 100%;
+
 }
 
 

@@ -15,6 +15,8 @@ import { Address } from 'ngx-google-places-autocomplete/objects/address';
 })
 export class PaintingComponent {
 
+
+
   options: any = {
     componentRestrictions: { country: 'CA' }
   }
@@ -62,9 +64,7 @@ export class PaintingComponent {
     { id: 6, label: "Painting", status: false }
   ];
 
-  constructor(private spinner: NgxSpinnerService, private http: HttpClient, private _getaquote: GetAQuoteService, private _toast: NgToastService) {
-
-  }
+  constructor(private spinner: NgxSpinnerService, private http: HttpClient, private _getaquote: GetAQuoteService, private _toast: NgToastService) {}
 
   quoteFormData(form: NgForm) {
     console.log(form.value);

@@ -26,12 +26,12 @@
 
             <div class="row g-3">
               <div class="col-sm-12 ">
-
+  
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" id="floatingInput" name="yourName" #yourNameRef="ngModel"
                     ngModel required />
                   <label for="floatingInput">Your Name</label>
-
+  
                 </div>
                 <div *ngIf="yourNameRef.errors && (yourNameRef.dirty || yourNameRef.touched)"
                   style="text-align:left; color:red;">
@@ -41,7 +41,7 @@
                 </div>
               </div>
               <div class="col-sm-6 col-12">
-
+  
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="floatingInput" name="email" #emailAdderssRef="ngModel"
                     ngModel required />
@@ -55,9 +55,9 @@
                 </div>
               </div>
               <div class="col-sm-6 col-12">
-
+  
                 <div class="form-floating mb-3">
-
+  
                   <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" #phoneNumberRef="ngModel"
                     ngModel [inputMask]="quotePhoneNumberInputMask" required>
                   <label for="floatingInput">Phone Number</label>
@@ -69,14 +69,14 @@
                   </div>
                 </div>
               </div>
-
+  
               <div class="col-12">
                 <div class="form-floating mb-3">
                   <input class="form-control" id="floatingInput" ngx-google-places-autocomplete [options]="options"
                     (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
                     required="" />
                   <label for="floatingInput">Address</label>
-
+  
                 </div>
                 <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
                   style="text-align:left; color:red;">
@@ -85,13 +85,13 @@
                   </div>
                 </div>
               </div>
-
+  
               <div class="col-12">
-                <div class="form-floating mb-3">
-
+                <div class="form-floating">
+  
                   <select class="form-select " name="serviceReq" id="floatingSelect"
                     aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
-
+  
                     <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
                       [selected]="opt.status == true" [disabled]="opt.label == 'Choose From Below'">
                       {{opt.label}}</option>
@@ -101,13 +101,14 @@
                       id="removeRev{{ind}}" id="">{{revReq}} <i class="fa fa-trash" aria-hidden="true"
                         (click)="removeRev(ind,revReq)"></i></span>
                   </div>
-
+  
                   <label for="floatingSelect">Renovation(s) Required</label>
-
+  
                 </div>
-
+  
               </div>
-              <button type="submit" class="btn btn-vary1 mt-1" [disabled]="!getaQuoteForm.form.valid">GET A FREE ESTIMATE</button>
+              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.selectedServiceRequiredGetQuote.length == 0">GET A FREE
+                ESTIMATE</button>
             </div>
 
           </form>
@@ -179,10 +180,10 @@
     <div class="row justify-content-center align-items-center">
       <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mb-lg-0 mb-4 fs-5">
         <div class="header-section">
-          <h3 class="title white">Are you prepared to begin?</h3>
-          <h2 class="small-title white">Selecting MTC Renovations ensures..</h2>
+          <h3 class="title ">Are you prepared to begin?</h3>
+          <h2 class="small-title ">Selecting MTC Renovations ensures..</h2>
 
-          <ul class="white">
+          <ul class="">
             <li>Comfortable Installation from the Convenience of Your Home</li>
             <li>10+ Years of Guaranteed Expertise</li>
             <li>Guaranteed Three-Week Installation</li>

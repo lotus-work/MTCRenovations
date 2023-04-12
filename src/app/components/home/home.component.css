@@ -93,6 +93,12 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  @media only screen and (max-width: 600px) {
+    .navbar-brand img {
+    width: 100%  !important;
+    }
+  }
   /*  */
   
   .icon-bar a {

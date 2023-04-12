@@ -24,7 +24,7 @@ body {
 }
 
 p{
-    text-align: justify;
+    
 }
 
 .white {
@@ -126,8 +126,19 @@ a {
     text-align: left !important;
 }
 
-@media (min-width: 992px) and (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1280px) {
     .free-consult-button{
         display: none;
     }
+    .navbar{
+        font-size: 12px;
+    }
   }
+
+  @media (max-width: 360px) {
+
+    .navigation .logo img{
+        width: 240px;
+      }
+  }
+

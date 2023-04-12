@@ -76,7 +76,7 @@
             </div>
 
             <div class="col-12">
-              <div class="form-floating mb-3">
+              <div class="form-floating">
 
                 <select class="form-select " name="serviceReq" id="floatingSelect"
                   aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
@@ -96,7 +96,7 @@
               </div>
 
             </div>
-            <button type="submit" class="btn btn-vary1 mt-1" [disabled]="!getaQuoteForm.form.valid">GET A FREE
+            <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.selectedServiceRequiredGetQuote.length == 0">GET A FREE
               ESTIMATE</button>
           </div>
 

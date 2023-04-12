@@ -67,7 +67,6 @@ export class BasementOurWorkComponent {
         { url: '../../../assets/img/basement/our-work/virtual-tour-320787-50.jpg', caption: 'Image 15' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-320787-51.jpg', caption: 'Image 16' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-320787-54.jpg', caption: 'Image 17' },
-        { url: '../../../assets/img/basement/our-work/virtual-tour-327738-08.jpg', caption: 'Image 19' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-43.jpg', caption: 'Image 20' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-49.jpg', caption: 'Image 23' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-50.jpg', caption: 'Image 24' },
