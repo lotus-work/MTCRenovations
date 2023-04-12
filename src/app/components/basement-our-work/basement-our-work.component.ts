@@ -52,7 +52,6 @@ export class BasementOurWorkComponent {
       this.images = [
         { url: '../../../assets/img/basement/our-work/screenshot-3.png', caption: 'Image 3' },
         { url: '../../../assets/img/basement/our-work/screenshot-4.png', caption: 'Image 4' },
-        { url: '../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-6.jpg', caption: 'Image 6' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-41.jpg', caption: 'Image 8' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-42.jpg', caption: 'Image 9' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-43.jpg', caption: 'Image 10' },
