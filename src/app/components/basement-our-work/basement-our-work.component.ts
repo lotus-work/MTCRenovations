@@ -80,10 +80,11 @@ export class BasementOurWorkComponent {
       this.images = [
         { url: '../../../assets/img/basement/our-work/screenshot-1.png', caption: 'Image 1' },
         { url: '../../../assets/img/basement/our-work/screenshot-3.png', caption: 'Image 3' },
-        { url: '../../../assets/img/basement/our-work/virtual-tour-318929-mls-high-res-image-6.jpg', caption: 'Image 6' },
-        { url: '../../../assets/img/basement/our-work/virtual-tour-327738-08.jpg', caption: 'Image 19' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-49.jpg', caption: 'Image 23' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-50.jpg', caption: 'Image 24' },
+        { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-46.jpg', caption: 'Image 32' },
+        { url: '../../../assets/img/basement/our-work/IMG_1374.jpg', caption: 'Image 32' },
+       
         
       ];
     }
