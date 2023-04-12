@@ -82,7 +82,6 @@ export class BathroomOurWorkComponent {
 
         { url: '../../../assets/img/bathroom/our-work/IMG_1366.jpg', caption: 'Image 1' },
         { url: '../../../assets/img/bathroom/our-work/IMG_2350.jpg', caption: 'Image 3' },
-        { url: '../../../assets/img/bathroom/our-work/IMG_7315.jpg', caption: 'Image 4' },
         { url: '../../../assets/img/bathroom/our-work/screenshot-1.png', caption: 'Image 14' },
         { url: '../../../assets/img/bathroom/our-work/screenshot-2.png', caption: 'Image 15' },
         { url: '../../../assets/img/bathroom/our-work/screenshot-3.png', caption: 'Image 16' },
@@ -105,7 +104,6 @@ export class BathroomOurWorkComponent {
         { url: '../../../assets/img/bathroom/our-work/virtual-tour-327738-35.jpg', caption: 'Image 32' },
         { url: '../../../assets/img/bathroom/our-work/virtual-tour-333305-mls-high-res-image-28.jpg', caption: 'Image 32' },
 
-        { url: '../../../assets/img/bathroom/our-work/IMG_7315.jpg', caption: 'Image 4' },
         { url: '../../../assets/img/bathroom/our-work/IMG_7316.jpg', caption: 'Image 5' },
         { url: '../../../assets/img/bathroom/our-work/IMG_1367.jpg', caption: 'Image 2' },
        
