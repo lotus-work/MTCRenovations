@@ -130,7 +130,7 @@ a {
     .free-consult-button{
         display: none;
     }
-    .navbar{
+    .navbar-expand-lg .navbar-nav .dropdown-menu , .navbar{
         font-size: 12px;
     }
   }
