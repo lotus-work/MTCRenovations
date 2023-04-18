@@ -10,7 +10,20 @@ interface Image {
 })
 export class PaintingOurWorkComponent {
   images: Image[] = [
-   
+    { url: '../../../assets/img/painting/our-work/IMG_9445.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9446.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/painting/our-work/IMG_9447.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/painting/our-work/IMG_9448.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9449.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/painting/our-work/IMG_9450.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/painting/our-work/IMG_9451.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9459.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/painting/our-work/IMG_9466.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/painting/our-work/IMG_9470.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9479.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9481.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/painting/our-work/IMG_9483.jpg', caption: 'Image 4' },
+
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-04.jpg', caption: 'Image 31' },
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-08.jpg', caption: 'Image 31' },
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-09.jpg', caption: 'Image 31' },

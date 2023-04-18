@@ -12,6 +12,16 @@ interface Image {
 })
 export class KitchenOurWorkComponent {
   images: Image[] = [
+    { url: '../../../assets/img/kitchen/our-work/IMG_9453.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9454.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9455.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9456.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9460.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9461.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9462.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9463.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9464.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9465.jpg', caption: 'Image 1' },
 
     { url: '../../../assets/img/kitchen/our-work/screenshot-4.png', caption: 'Image 17' },
     { url: '../../../assets/img/kitchen/our-work/screenshot-5.png', caption: 'Image 18' },

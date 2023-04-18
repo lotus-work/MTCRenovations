@@ -12,7 +12,18 @@ interface Image {
 })
 export class FlooringOurWorkComponent {
   images: Image[] = [
-    
+    { url: '../../../assets/img/flooring/our-work/IMG_9448.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9449.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9450.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9451.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9469.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9473.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9476.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9477.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9483.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9494.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9497.jpg', caption: 'Image 1' },
+
     { url: '../../../assets/img/flooring/our-work/screenshot-4.png', caption: 'Image 17' },
     { url: '../../../assets/img/flooring/our-work/screenshot-5.png', caption: 'Image 18' },
     { url: '../../../assets/img/flooring/our-work/screenshot-6.png', caption: 'Image 19' },
