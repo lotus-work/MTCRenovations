@@ -21,6 +21,9 @@
 .navbar-nav .nav-item .nav-link {
   
     position: relative;
-    text-transform: uppercase;
+    text-transform: capitalize;
     transition: all .3s ease-in-out;
+    
 }
+
+
