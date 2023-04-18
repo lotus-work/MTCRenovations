@@ -64,7 +64,7 @@ export class BasementOurWorkComponent {
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-43.jpg', caption: 'Image 20' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-49.jpg', caption: 'Image 23' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-327738-50.jpg', caption: 'Image 24' },
-{ url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-38.jpg', caption: 'Image 28' },
+        { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-38.jpg', caption: 'Image 28' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-40.jpg', caption: 'Image 29' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-42.jpg', caption: 'Image 30' },
         { url: '../../../assets/img/basement/our-work/virtual-tour-333305-mls-high-res-image-45.jpg', caption: 'Image 31' },

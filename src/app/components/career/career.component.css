@@ -8,6 +8,9 @@
 .hiring .core-values{
 border-top: 2px solid #fff;
 }
+.hiring h3{
+    text-transform: capitalize;
+}
 
 /* IDEAL CANDIATE */
 

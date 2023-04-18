@@ -1,3 +1,33 @@
 .why-us{
     padding: 80px 0;
 }
+
+li {
+	list-style-type: none!important;
+}
+
+ul {
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+
+ul.checkmark {
+	margin-top: 20px;
+}
+
+ul.checkmark li:before {
+	vertical-align: middle;
+}
+
+ul.checkmark li:before {
+	color: rgb(237, 13, 13);
+	content: '\2714\0020';
+	display: inline-block;
+	margin-left: -36px;
+	width: 36px;
+}
+ul.checkmark .text-bold{
+    font-weight: 900;
+	color: rgb(0, 0, 0);
+}

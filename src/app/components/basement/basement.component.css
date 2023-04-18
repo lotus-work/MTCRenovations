@@ -91,6 +91,7 @@
   line-height: normal;
   letter-spacing: 1px;
   font-size: 40px;
+  text-transform: capitalize;
 }
 
 @media (max-width: 480px) {
