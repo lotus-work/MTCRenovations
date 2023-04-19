@@ -10,7 +10,7 @@
     font-size: 78px;
 }
 .navbar-section h2{
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size: 38px;
     line-height: 1.5em;
 }
