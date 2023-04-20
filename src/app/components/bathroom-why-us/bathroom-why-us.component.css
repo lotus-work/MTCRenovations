@@ -1,35 +1,25 @@
-.why-us{
-    padding: 80px 0;
-}
-
-li {
-	list-style-type: none!important;
-}
-
-ul {
+.why-us {
+	padding: 80px 0;
+  }
+  
+  li {
+	list-style-type: none !important;
+  }
+  
+  ul {
 	margin-bottom: 20px;
 	margin-left: 10px;
-}
-
-
-ul.checkmark {
-	margin-top: 20px;
-}
-
-ul.checkmark li:before {
-	vertical-align: middle;
-}
-
-ul.checkmark li:before {
-	content: '\2714\0020';
-	display: inline-block;
-	margin-left: -36px;
-	width: 36px;
-	-webkit-text-fill-color: rgb(255, 0, 0); 
-	-webkit-opacity: 1; 
-	color: rgb(255, 0, 0); 
-}
-ul.checkmark .text-bold{
-    font-weight: 900;
+  }
+  ol, ul {
+  padding: 0 !important;
+  }
+  li{
+	padding: 0 0 15px 0;
+  }
+  
+  
+  ul.checkmark .text-bold {
+	font-weight: 900;
 	color: rgb(0, 0, 0);
-}
+  }
+  
