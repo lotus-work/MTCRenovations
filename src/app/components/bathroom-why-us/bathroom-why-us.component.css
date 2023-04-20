@@ -26,6 +26,8 @@ ul.checkmark li:before {
 	display: inline-block;
 	margin-left: -36px;
 	width: 36px;
+	-webkit-text-fill-color:  rgb(237, 13, 13);
+	-webkit-opacity: 1 !important;
 }
 ul.checkmark .text-bold{
     font-weight: 900;
