@@ -4,11 +4,10 @@
 
 .request-a-quote{
     padding: 80px 0;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg) no-repeat center center fixed;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
-  
     width: 100%;
 }
