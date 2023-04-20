@@ -22,7 +22,6 @@
     background-size: cover;
     animation: image 10s infinite alternate;
     width: 100%;
-    background-attachment: fixed;
   
   }
   
