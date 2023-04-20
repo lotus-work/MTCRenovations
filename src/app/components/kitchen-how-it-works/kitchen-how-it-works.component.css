@@ -17,6 +17,8 @@ padding-top: 10px;
 }
 .how-it-works h3{
     line-height: 40px;
+    
+    text-transform: capitalize;
 }
 
 .how-it-works img {
