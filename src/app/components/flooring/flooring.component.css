@@ -195,6 +195,15 @@
     background-position: center;
     background-size: contain;
   }
+
+  
+  .how-it-works img {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
   
 
   
