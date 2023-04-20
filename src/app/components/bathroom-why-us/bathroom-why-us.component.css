@@ -21,13 +21,13 @@ ul.checkmark li:before {
 }
 
 ul.checkmark li:before {
-	color: rgb(237, 13, 13);
 	content: '\2714\0020';
 	display: inline-block;
 	margin-left: -36px;
 	width: 36px;
-	-webkit-text-fill-color:  rgb(237, 13, 13);
-	-webkit-opacity: 1 !important;
+	-webkit-text-fill-color: rgb(255, 0, 0); 
+	-webkit-opacity: 1; 
+	color: rgb(255, 0, 0); 
 }
 ul.checkmark .text-bold{
     font-weight: 900;
