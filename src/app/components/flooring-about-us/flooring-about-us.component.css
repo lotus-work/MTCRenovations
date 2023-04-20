@@ -4,10 +4,56 @@
 
 .request-a-quote{
     padding: 80px 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg) no-repeat center center fixed;
-     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+  
     width: 100%;
 }
+
+.overlay-text {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg);
+  
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: image 10s infinite alternate;
+    width: 100%;
+    background-attachment: fixed;
+  
+  }
+  
+  @media screen and (min-width: 769px) {
+  
+    .overlay-text {
+  
+      height: 100%;
+  
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: image 15s infinite alternate;
+      width: 100%;
+    }
+  
+    @keyframes image {
+      100% {
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.849)), url(../../../assets/img/flooring/our-work/virtual-tour-333305-mls-high-res-image-40.jpg);
+  
+      }
+    }
+  }
+  
+  
+  .basement .overlay-text .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: .5;
+  }
