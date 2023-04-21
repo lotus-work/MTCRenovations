@@ -24,6 +24,14 @@ export class PaintingOurWorkComponent {
     { url: '../../../assets/img/painting/our-work/IMG_9481.jpg', caption: 'Image 4' },
     { url: '../../../assets/img/painting/our-work/IMG_9483.jpg', caption: 'Image 4' },
 
+    
+    { url: '../../../assets/img/flooring/our-work/IMG_9632.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9633.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9634.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9638.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9640.jpg', caption: 'Image 1' },
+
+
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-04.jpg', caption: 'Image 31' },
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-08.jpg', caption: 'Image 31' },
     { url: '../../../assets/img/painting/our-work/virtual-tour-327738-09.jpg', caption: 'Image 31' },

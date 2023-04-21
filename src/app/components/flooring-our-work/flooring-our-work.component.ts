@@ -24,6 +24,13 @@ export class FlooringOurWorkComponent {
     { url: '../../../assets/img/flooring/our-work/IMG_9494.jpg', caption: 'Image 1' },
     { url: '../../../assets/img/flooring/our-work/IMG_9497.jpg', caption: 'Image 1' },
 
+    
+    { url: '../../../assets/img/flooring/our-work/IMG_9632.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9633.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9634.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9638.jpg', caption: 'Image 1' },
+    { url: '../../../assets/img/flooring/our-work/IMG_9640.jpg', caption: 'Image 1' },
+
     { url: '../../../assets/img/flooring/our-work/screenshot-4.png', caption: 'Image 17' },
     { url: '../../../assets/img/flooring/our-work/screenshot-5.png', caption: 'Image 18' },
     { url: '../../../assets/img/flooring/our-work/screenshot-6.png', caption: 'Image 19' },

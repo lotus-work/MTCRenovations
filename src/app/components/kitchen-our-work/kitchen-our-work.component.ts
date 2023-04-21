@@ -23,6 +23,11 @@ export class KitchenOurWorkComponent {
     { url: '../../../assets/img/kitchen/our-work/IMG_9464.jpg', caption: 'Image 4' },
     { url: '../../../assets/img/kitchen/our-work/IMG_9465.jpg', caption: 'Image 1' },
 
+    
+    { url: '../../../assets/img/kitchen/our-work/IMG_9649.jpg', caption: 'Image 3' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9650.jpg', caption: 'Image 4' },
+    { url: '../../../assets/img/kitchen/our-work/IMG_9651.jpg', caption: 'Image 1' },
+
     { url: '../../../assets/img/kitchen/our-work/screenshot-4.png', caption: 'Image 17' },
     { url: '../../../assets/img/kitchen/our-work/screenshot-5.png', caption: 'Image 18' },
     { url: '../../../assets/img/kitchen/our-work/screenshot-6.png', caption: 'Image 19' },

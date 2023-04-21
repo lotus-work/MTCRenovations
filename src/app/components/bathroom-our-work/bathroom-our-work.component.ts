@@ -26,6 +26,7 @@ export class BathroomOurWorkComponent {
     { url: '../../../assets/img/bathroom/our-work/IMG_9484.jpg', caption: 'Image 3' },
     { url: '../../../assets/img/bathroom/our-work/IMG_9493.jpg', caption: 'Image 4' },
 
+    { url: '../../../assets/img/bathroom/our-work/IMG_9642.jpg', caption: 'Image 4' },
     { url: '../../../assets/img/bathroom/our-work/virtual-tour-318929-mls-high-res-image-27.jpg', caption: 'Image 25' },
     { url: '../../../assets/img/bathroom/our-work/virtual-tour-318929-mls-high-res-image-28.jpg', caption: 'Image 26' },
     { url: '../../../assets/img/bathroom/our-work/virtual-tour-318929-mls-high-res-image-29.jpg', caption: 'Image 27' },
