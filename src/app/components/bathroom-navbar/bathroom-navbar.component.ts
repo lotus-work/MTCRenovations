@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BathroomNavbarComponent {
 
-  logo: string = "../../../assets/img/logo.png";
+  logo: string = "../../../assets/img/png_01.png";
   constructor() { }
 
   ngOnInit(): void {
@@ -35,14 +35,14 @@ export class BathroomNavbarComponent {
        document.body.style.setProperty('--navbar-scroll-shadow', "0px 6px 12px -5px #000000");
        document.body.style.setProperty('--navlink-scroll-text', "black");
        
-       this.logo = "../../../assets/img/logo.png";
+       this.logo = "../../../assets/img/png_01.png";
        
      }else if(window.scrollY < scrollHeigth){
        document.body.style.setProperty('--navbar-scroll', "transparent");
        document.body.style.setProperty('--navbar-scroll-text', "black");
        document.body.style.setProperty('--navbar-scroll-shadow', "none");
        document.body.style.setProperty('--navlink-scroll-text', "black");
-       this.logo = "../../../assets/img/logo.png";
+       this.logo = "../../../assets/img/png_01.png";
     
      }
    }
