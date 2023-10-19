@@ -11,8 +11,8 @@ export class GetAQuoteService {
 
   rootURL1= "https://red-violet-horse-cape.cyclic.app/";  
  
-  sendGetQuoteData( yourName: string,  email: string, phoneNumber: string, address: string, renovationRequired: string): Observable<boolean> {
-    return this.http.post<boolean>(this.rootURL1 + "mtc-renovations/get-a-quote", {
+  sendGetQuoteData( yourName: string,  email: string, phoneNumber: string, address: string, renovationRequired: string): Observable<any> {
+    return this.http.post<any>(this.rootURL1 + "mtc-renovations/get-a-quote", {
       yourName:yourName,
       email:email,
       phoneNumber:phoneNumber,
