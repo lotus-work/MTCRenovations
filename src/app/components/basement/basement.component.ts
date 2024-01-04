@@ -74,6 +74,12 @@ export class BasementComponent {
     }
     this.spinner.show();
 
+    console.log(this.fullAddress);
+
+    if(this.fullAddress == ''){
+      this.fullAddress = form.value.address;
+    }
+
     this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.selectedServiceRequiredGetQuote,).subscribe(res => {
 
 
@@ -109,7 +115,31 @@ export class BasementComponent {
 
     }, err => { // this._toast.warning({ detail: " FAILED", summary: 'Please try after sometime', position: 'br' });
 
-        alert('An error occurred. Please try after sometime!');
+       
+      var errMsg = "";
+      var arrErr = [];
+      if(form.value.yourName == ""){
+        arrErr.push("Your Name");
+      }else if(form.value.email == ""){
+        arrErr.push("Email");
+      }else if(form.value.phoneNumber == ""){
+        arrErr.push("Phone Number");
+      }else if(this.fullAddress == ""){
+        arrErr.push("Address");
+      }else{
+        errMsg = "Unable to submit. Please re-enter the details manually, in the form. Avoid selecting from pre filled options."
+      }
+
+      if(arrErr.length == 0)
+      {
+        errMsg = "Unable to submit. Maybe enter the details manually in the webform instead of Pre-filled options. or please try after sometime! ";
+      }
+      else{
+        errMsg = "Unable to submit. Please re-enter " + arrErr + ", and try again. Try to enter the details manually."
+      }
+
+
+        alert(errMsg);
         location.reload;
         setTimeout(() => {
             this.spinner.hide();

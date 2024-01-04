@@ -29,7 +29,7 @@
               <div class="col-sm-12 ">
   
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" name="yourName" #yourNameRef="ngModel"
+                  <input type="text" class="form-control" id="floatingInput" autocomplete="new-password" name="yourName" #yourNameRef="ngModel"
                     ngModel required />
                   <label for="floatingInput">Your Name</label>
   
@@ -44,7 +44,7 @@
               <div class="col-sm-6 col-12">
   
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" name="email" #emailAdderssRef="ngModel"
+                  <input type="email" class="form-control" autocomplete="new-password" id="floatingInput" name="email" #emailAdderssRef="ngModel"
                     ngModel required />
                   <label for="floatingInput">Email</label>
                 </div>
@@ -59,7 +59,7 @@
   
                 <div class="form-floating mb-3">
   
-                  <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" #phoneNumberRef="ngModel"
+                  <input type="tel" class="form-control" autocomplete="new-password" name="phoneNumber" id="phoneNumber" #phoneNumberRef="ngModel"
                     ngModel [inputMask]="quotePhoneNumberInputMask" required>
                   <label for="floatingInput">Phone Number</label>
                 </div>
@@ -73,7 +73,7 @@
   
               <div class="col-12">
                 <div class="form-floating mb-3">
-                  <input class="form-control" id="floatingInput" ngx-google-places-autocomplete [options]="options"
+                  <input class="form-control" id="floatingInput" autocomplete="new-password" ngx-google-places-autocomplete [options]="options"
                     (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
                     required="" />
                   <label for="floatingInput">Address</label>
