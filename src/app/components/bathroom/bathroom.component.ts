@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NgToastService } from 'ng-angular-popup';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -15,6 +15,13 @@ import { Address } from 'ngx-google-places-autocomplete/objects/address';
 })
 export class BathroomComponent {
 
+
+  @ViewChild('nameInput')
+  nameInput!: ElementRef;
+  @ViewChild('addressInput')
+  addressInput!: ElementRef;
+  @ViewChild('emailInput') emailInput!: ElementRef;
+  @ViewChild('phoneInput') phoneInput!: ElementRef;
 
 
   options: any = {
@@ -76,9 +83,15 @@ export class BathroomComponent {
 
     console.log(this.fullAddress);
 
-    if(this.fullAddress == ''){
-      this.fullAddress = form.value.address;
-    }
+    // if(this.fullAddress == ''){
+    //   this.fullAddress = form.value.address;
+    // }
+
+    
+form.value.yourName  = this.nameInput.nativeElement.value;
+form.value.email  = this.emailInput.nativeElement.value;
+form.value.phoneNumber  = this.phoneInput.nativeElement.value;
+this.fullAddress = this.addressInput.nativeElement.value;
 
     this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.selectedServiceRequiredGetQuote,).subscribe(res => {
 
