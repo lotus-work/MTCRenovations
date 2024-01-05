@@ -39,6 +39,7 @@ import { PaintingCareerComponent } from './components/painting-career/painting-c
 import { FlooringCareerComponent } from './components/flooring-career/flooring-career.component';
 import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
 import { BathroomCareerComponent } from './components/bathroom-career/bathroom-career.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -83,7 +84,10 @@ const routes: Routes = [
   {path: 'painting/how-it-works', component: PaintingHowItWorksComponent},
   {path: 'painting/our-work', component: PaintingOurWorkComponent},
   {path: 'painting/get-free-quote', component: PaintingGetFreeQuoteComponent},
-  { path: 'painting/careers', component: PaintingCareerComponent}
+  {path: 'painting/careers', component: PaintingCareerComponent},
+
+  {path: 'thank-you', component: ThankYouComponent}
+
 ];
 
 @NgModule({

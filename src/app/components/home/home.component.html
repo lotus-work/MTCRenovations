@@ -208,7 +208,9 @@
                   (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
                   required="" #addressInput/>
                 <label for="floatingInput">Address</label>
-
+                <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                  <img src="../../../assets/img/powered-by-google-transparent.png" width="100" alt="" >
+                </div>
               </div>
               <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
                 style="text-align:left; color:red;">

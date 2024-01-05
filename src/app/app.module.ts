@@ -59,6 +59,7 @@ import { BathroomCareerComponent } from './components/bathroom-career/bathroom-c
 import { FlooringCareerComponent } from './components/flooring-career/flooring-career.component';
 import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
 import { PaintingCareerComponent } from './components/painting-career/painting-career.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,7 +110,8 @@ import { PaintingCareerComponent } from './components/painting-career/painting-c
     BathroomCareerComponent,
     FlooringCareerComponent,
     KitchenCareerComponent,
-    PaintingCareerComponent
+    PaintingCareerComponent,
+    ThankYouComponent
   ],
   imports: [
     BrowserModule,

@@ -105,7 +105,7 @@ this.fullAddress = this.addressInput.nativeElement.value;
       }, 1000);
       this._toast.success({detail: "SUCCESS", summary: 'Form successfully submitted', position: 'br'});
       setTimeout(function () {
-          window.location.reload();
+        window.location.href = '/thank-you'
       }, 1000);
 
     } else if (res.status == "error") {

@@ -104,7 +104,7 @@ export class FlooringComponent {
       }, 1000);
       this._toast.success({detail: "SUCCESS", summary: 'Form successfully submitted', position: 'br'});
       setTimeout(function () {
-          window.location.reload();
+        window.location.href = '/thank-you'
       }, 1000);
 
     } else if (res.status == "error") {

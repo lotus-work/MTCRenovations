@@ -96,17 +96,13 @@ console.log(this.fullAddress);
 
     this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.selectedServiceRequiredGetQuote,).subscribe(res => {
 
-
       if (res.status == "success") {
-  
-
         setTimeout(() => {
-
           this.spinner.hide();
       }, 1000);
       this._toast.success({detail: "SUCCESS", summary: 'Form successfully submitted', position: 'br'});
       setTimeout(function () {
-          window.location.reload();
+        window.location.href = '/thank-you'
       }, 1000);
 
     } else if (res.status == "error") {
