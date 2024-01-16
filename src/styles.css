@@ -22,7 +22,8 @@ body {
     --navbar-scroll-text: #000;
     --navbar-scroll-shadow: none;
     --navlink-scroll-text: #000;
-   transform: scale(0.8);
+/*    transform: scale(0.8); */
+   zoom: 80% !important;
 }
 
 p{
