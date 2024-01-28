@@ -90,7 +90,7 @@
               </div>
   
               <div class="col-12">
-                <div class="form-floating">
+                <!-- <div class="form-floating">
   
                   <select class="form-select " name="serviceReq" id="floatingSelect"
                     aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
@@ -107,10 +107,23 @@
   
                   <label for="floatingSelect">Renovation(s) Required</label>
   
-                </div>
+                </div> -->
+                <label for="">Renovation(s) Required</label>
+                
+                <div class="">
   
+                
+
+                  <div class="form-check"  *ngFor="let asset of assets">
+                    <input class="form-check-input" type="checkbox" value="{{ asset }}"  id="{{asset}}"  (change)="onChange(asset)">
+                    <label class="form-check-label" for="{{asset}}">
+                      {{asset}}
+                    </label>
+                  </div>
+
+                </div>
               </div>
-              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.selectedServiceRequiredGetQuote.length == 0">GET A FREE
+              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.all_selected_values.length == 0">GET A FREE
                 ESTIMATE</button>
             </div>
 

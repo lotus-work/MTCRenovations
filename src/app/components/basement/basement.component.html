@@ -87,27 +87,43 @@
               </div>
   
               <div class="col-12">
-                <div class="form-floating">
+                <label for="">Renovation(s) Required</label>
+                
+                <div class="">
   
-                  <select class="form-select " name="serviceReq" id="floatingSelect"
+                
+
+                  <div class="form-check"  *ngFor="let asset of assets">
+                    <input class="form-check-input" type="checkbox" value="{{ asset }}"  id="{{asset}}"  (change)="onChange(asset)">
+                    <label class="form-check-label" for="{{asset}}">
+                      {{asset}}
+                    </label>
+                  </div>
+
+                </div>
+  
+                  
+  <!-- <select class="form-select " name="serviceReq" id="floatingSelect"
                     aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
   
                     <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
                       [selected]="opt.status == true" [disabled]="opt.label == 'Choose From Below'">
                       {{opt.label}}</option>
-                  </select>
-                  <div id="renovationReq">
+                  </select> -->
+
+                  <!-- <div *ngFor="let asset of assets">
+                    <input (change)="onChange(asset)" type="checkbox" value="{{ asset }}" />{{asset}}
+                  </div> -->
+                  <!-- <div id="renovationReq">
                     <span class="pe-2 me-2" *ngFor="let revReq of this.selectedServiceRequiredGetQuote; let ind = index"
                       id="removeRev{{ind}}" id="">{{revReq}} <i class="fa fa-trash" aria-hidden="true"
                         (click)="removeRev(ind,revReq)"></i></span>
-                  </div>
+                  </div> -->
   
-                  <label for="floatingSelect">Renovation(s) Required</label>
-  
-                </div>
+                  <!-- <label for="floatingSelect">Renovation(s) Required</label> -->
   
               </div>
-              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.selectedServiceRequiredGetQuote.length == 0">GET A FREE
+              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.all_selected_values.length == 0">GET A FREE
                 ESTIMATE</button>
             </div>
 

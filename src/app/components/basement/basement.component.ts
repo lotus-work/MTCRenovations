@@ -26,7 +26,7 @@ export class BasementComponent {
   options: any = {
     componentRestrictions: { country: 'CA' }
   }
-  
+
   selectedServiceRequiredGetQuote: any = [];
 
   fullAddress: string = "";
@@ -40,27 +40,37 @@ export class BasementComponent {
   quotePhoneNumberInputMask = createMask({
     mask: '(999) 999-9999',
   });
+  assets: any = ['Basement', 'Bathroom', 'Kitchen', 'Flooring/Stairs', 'Painting'];
+  all_selected_values: any = [];
+  onChange(value: string): void {
+    if (this.all_selected_values.includes(value)) {
+      this.all_selected_values = this.all_selected_values.filter((item: string) => item !== value);
+    } else {
+      this.all_selected_values.push(value);
+    }
+    console.log(this.all_selected_values);
+  }
+  
   selectChangeHandler1(event: any) {
     // this.selectedServiceRequiredGetQuote = event.target.value;
     this.selectedServiceRequiredGetQuote.push(event.target.value);
     console.log(this.selectedServiceRequiredGetQuote);
   }
 
-  removeRev(indexNumber: number, indexVal:string) {
-    
-    if(this.selectedServiceRequiredGetQuote[indexNumber] == indexVal)
-    {
-     this.selectedServiceRequiredGetQuote.splice(indexNumber,1);
+  removeRev(indexNumber: number, indexVal: string) {
+
+    if (this.selectedServiceRequiredGetQuote[indexNumber] == indexVal) {
+      this.selectedServiceRequiredGetQuote.splice(indexNumber, 1);
     }
     console.log(this.selectedServiceRequiredGetQuote);
- 
-   }
-   
+
+  }
+
   handleAddressChange(address: Address) {
     this.fullAddress = address.formatted_address;
-    
+
   }
-  
+
   getAQuoteServicesReq = [
     { id: 1, label: "Choose From Below", status: true },
     { id: 2, label: "Basement", status: false },
@@ -70,13 +80,13 @@ export class BasementComponent {
     { id: 6, label: "Painting", status: false }
   ];
 
-  constructor(private spinner: NgxSpinnerService, private http: HttpClient, private _getaquote: GetAQuoteService, private _toast: NgToastService) {}
+  constructor(private spinner: NgxSpinnerService, private http: HttpClient, private _getaquote: GetAQuoteService, private _toast: NgToastService) { }
 
-  quoteFormData(form : NgForm) {
+  quoteFormData(form: NgForm) {
     console.log(form.value);
     console.log(this.selectedServiceRequiredGetQuote);
     if (this.selectedServiceRequiredGetQuote == '') {
-        this.selectedServiceRequiredGetQuote = 'Basement';
+      this.selectedServiceRequiredGetQuote = 'Basement';
     }
     // this.spinner.show();
 
@@ -89,78 +99,77 @@ export class BasementComponent {
     // }
 
     console.log(this.fullAddress);
-      
-form.value.yourName  = this.nameInput.nativeElement.value;
-form.value.email  = this.emailInput.nativeElement.value;
-form.value.phoneNumber  = this.phoneInput.nativeElement.value;
-this.fullAddress = this.addressInput.nativeElement.value;
-console.log(this.fullAddress);
 
-    this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.selectedServiceRequiredGetQuote,).subscribe(res => {
+    form.value.yourName = this.nameInput.nativeElement.value;
+    form.value.email = this.emailInput.nativeElement.value;
+    form.value.phoneNumber = this.phoneInput.nativeElement.value;
+    this.fullAddress = this.addressInput.nativeElement.value;
+    console.log(this.fullAddress);
+
+    this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.all_selected_values).subscribe(res => {
 
 
       if (res.status == "success") {
-  
+
 
         setTimeout(() => {
 
           this.spinner.hide();
-      }, 1000);
-      this._toast.success({detail: "SUCCESS", summary: 'Form successfully submitted', position: 'br'});
-      setTimeout(function () {
-        window.location.href = '/thank-you'
-      }, 1000);
-
-    } else if (res.status == "error") {
-      alert(res.message);
-      location.reload;
-        setTimeout(() => {
-            this.spinner.hide();
-            window.location.reload();
+        }, 1000);
+        this._toast.success({ detail: "SUCCESS", summary: 'Form successfully submitted', position: 'br' });
+        setTimeout(function () {
+          window.location.href = '/thank-you'
         }, 1000);
 
-    } else if (res.status == "timeout") {
-      alert(res.message);
-      location.reload;
+      } else if (res.status == "error") {
+        alert(res.message);
+        location.reload;
         setTimeout(() => {
-            this.spinner.hide();
-            window.location.reload();
+          this.spinner.hide();
+          window.location.reload();
+        }, 1000);
+
+      } else if (res.status == "timeout") {
+        alert(res.message);
+        location.reload;
+        setTimeout(() => {
+          this.spinner.hide();
+          window.location.reload();
         }, 1000);
 
       }
 
     }, err => { // this._toast.warning({ detail: " FAILED", summary: 'Please try after sometime', position: 'br' });
 
-       
+
       var errMsg = "";
       var arrErr = [];
-      if(form.value.yourName == ""){
+      if (form.value.yourName == "") {
         arrErr.push("Your Name");
-      }else if(form.value.email == ""){
+      } else if (form.value.email == "") {
         arrErr.push("Email");
-      }else if(form.value.phoneNumber == ""){
+      } else if (form.value.phoneNumber == "") {
         arrErr.push("Phone Number");
-      }else if(this.fullAddress == ""){
+      } else if (this.fullAddress == "") {
         arrErr.push("Address");
-      }else{
+      } else {
         errMsg = "Unable to submit. Please re-enter the details manually, in the form. Avoid selecting from pre filled options."
       }
 
-      if(arrErr.length == 0)
-      {
+      if (arrErr.length == 0) {
         errMsg = "Unable to submit. Maybe enter the details manually in the webform instead of Pre-filled options. or please try after sometime! ";
       }
-      else{
+      else {
         errMsg = "Unable to submit. Please re-enter " + arrErr + ", and try again. Try to enter the details manually."
       }
 
 
-        alert(errMsg);
-        location.reload;
-        setTimeout(() => {
-            this.spinner.hide();
-            window.location.reload();
-        }, 1000);
+      alert(errMsg);
+      location.reload;
+      setTimeout(() => {
+        this.spinner.hide();
+        window.location.reload();
+      }, 1000);
     }, () => console.log("QUOTE FORM SUMBITTED SUCCESSFULLY"))
-}
+  }
 }

@@ -41,6 +41,16 @@ export class BasementGetFreeQuoteComponent {
   quotePhoneNumberInputMask = createMask({
     mask: '(999) 999-9999',
   });
+  assets: any = ['Basement', 'Bathroom', 'Kitchen', 'Flooring/Stairs', 'Painting'];
+  all_selected_values: any = [];
+  onChange(value: string): void {
+    if (this.all_selected_values.includes(value)) {
+      this.all_selected_values = this.all_selected_values.filter((item: string) => item !== value);
+    } else {
+      this.all_selected_values.push(value);
+    }
+    console.log(this.all_selected_values);
+  }
   selectChangeHandler1(event: any) {
     // this.selectedServiceRequiredGetQuote = event.target.value;
     this.selectedServiceRequiredGetQuote.push(event.target.value);
@@ -93,7 +103,7 @@ form.value.email  = this.emailInput.nativeElement.value;
 form.value.phoneNumber  = this.phoneInput.nativeElement.value;
 this.fullAddress = this.addressInput.nativeElement.value;
 
-    this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.selectedServiceRequiredGetQuote,).subscribe(res => {
+    this._getaquote.sendGetQuoteData(form.value.yourName, form.value.email, form.value.phoneNumber, this.fullAddress, this.all_selected_values).subscribe(res => {
 
 
       if (res.status == "success") {
