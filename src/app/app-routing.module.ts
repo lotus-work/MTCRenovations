@@ -40,6 +40,8 @@ import { FlooringCareerComponent } from './components/flooring-career/flooring-c
 import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
 import { BathroomCareerComponent } from './components/bathroom-career/bathroom-career.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { NewleadintakeComponent } from './components/newleadintake/newleadintake.component';
+import { NewvendorformComponent } from './components/newvendorform/newvendorform.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -86,7 +88,10 @@ const routes: Routes = [
   {path: 'painting/get-free-quote', component: PaintingGetFreeQuoteComponent},
   {path: 'painting/careers', component: PaintingCareerComponent},
 
-  {path: 'thank-you', component: ThankYouComponent}
+  {path: 'thank-you', component: ThankYouComponent},
+  {path: 'newleadintake', component: NewleadintakeComponent},
+  {path: 'newvendorintake', component: NewvendorformComponent},
+  
 
 ];
 

@@ -1,0 +1,224 @@
+.jtwf .mx-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.jtwf .block {
+    display: block
+}
+
+.jtwf .flex {
+    display: flex
+}
+
+.jtwf .max-h-24 {
+    max-height: 6rem
+}
+
+.jtwf .w-full {
+    width: 100%
+}
+
+.jtwf .min-w-0 {
+    min-width: 0
+}
+
+.jtwf .max-w-full {
+    max-width: 100%
+}
+
+.jtwf .max-w-sm {
+    max-width: 24rem
+}
+
+.jtwf .shrink-0 {
+    flex-shrink: 0
+}
+
+.jtwf .grow {
+    flex-grow: 1
+}
+
+.jtwf .cursor-pointer {
+    cursor: pointer
+}
+
+.jtwf .appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.jtwf .items-center {
+    align-items: center
+}
+
+.jtwf .gap-2 {
+    gap: .5rem
+}
+
+.jtwf .space-y-2>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-bottom: calc(.5rem*var(--tw-space-y-reverse));
+    margin-top: calc(.5rem*(1 - var(--tw-space-y-reverse)))
+}
+
+.jtwf .divide-y>:not([hidden])~:not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-width: calc(1px*var(--tw-divide-y-reverse));
+    border-top-width: calc(1px*(1 - var(--tw-divide-y-reverse)))
+}
+
+.jtwf .overflow-hidden {
+    overflow: hidden
+}
+
+.jtwf .rounded {
+    border-radius: .25rem
+}
+
+.jtwf .border {
+    border-width: 1px
+}
+
+.jtwf .bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity))
+}
+
+.jtwf .p-2 {
+    padding: .5rem
+}
+
+.jtwf .p-4 {
+    padding: 1rem
+}
+
+.jtwf .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+.jtwf .py-2 {
+    padding-bottom: .5rem;
+    padding-top: .5rem
+}
+
+.jtwf .text-center {
+    text-align: center
+}
+
+.jtwf .text-right {
+    text-align: right
+}
+
+.jtwf .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+
+.jtwf .font-bold {
+    font-weight: 700
+}
+
+.jtwf .font-normal {
+    font-weight: 400
+}
+
+.jtwf .text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128/var(--tw-text-opacity))
+}
+
+.jtwf .text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68/var(--tw-text-opacity))
+}
+
+.jtwf .shadow {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color)
+}
+
+.jtwf .shadow,
+.jtwf .shadow-sm {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.jtwf .shadow-sm {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color)
+}
+
+.jtwf .transition {
+    transition-duration: .25s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+
+.jtwf * {
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box
+}
+
+.jtwf button,
+.jtwf input,
+.jtwf optgroup,
+.jtwf select,
+.jtwf textarea {
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0
+}
+
+.jtwf .focus-within\:border-blue-500:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246/var(--tw-border-opacity))
+}
+
+.jtwf .focus-within\:bg-white:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity))
+}
+
+.jtwf .focus-within\:shadow:focus-within {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.jtwf .focus-within\:ring:focus-within {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.jtwf .hover\:bg-gray-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity))
+}
+
+.jtwf .hover\:brightness-95:hover {
+    --tw-brightness: brightness(.95);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.jtwf .\[\&\:\:-webkit-date-and-time-value\]\:h-5::-webkit-date-and-time-value {
+    height: 1.25rem
+}
+
+.jtwf .hover\:\[\&\:not\(\:focus-within\)\]\:border-gray-300:not(:focus-within):hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity))
+}
+
+.jtwf .hover\:\[\&\:not\(\:focus-within\)\]\:bg-gray-50:not(:focus-within):hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity))
+}
