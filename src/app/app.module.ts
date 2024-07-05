@@ -60,6 +60,8 @@ import { FlooringCareerComponent } from './components/flooring-career/flooring-c
 import { KitchenCareerComponent } from './components/kitchen-career/kitchen-career.component';
 import { PaintingCareerComponent } from './components/painting-career/painting-career.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { NewleadintakeComponent } from './components/newleadintake/newleadintake.component';
+import { NewvendorformComponent } from './components/newvendorform/newvendorform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -111,7 +113,9 @@ import { ThankYouComponent } from './components/thank-you/thank-you.component';
     FlooringCareerComponent,
     KitchenCareerComponent,
     PaintingCareerComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    NewleadintakeComponent,
+    NewvendorformComponent
   ],
   imports: [
     BrowserModule,

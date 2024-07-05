@@ -1,8 +1,8 @@
 <app-bathroom-navbar></app-bathroom-navbar>
 <section class="bathroom">
   <div class="container-fluid overlay-text vh-100 d-flex justify-content-center align-items-center">
-    <div class="row d-flex justify-content-center align-items-center intro-cont" data-scrollax-parent="true">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-left">
+    <div class="row container d-flex justify-content-right align-items-center intro-cont" data-scrollax-parent="true">
+      <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 text-left">
         <h1 class="mb-4">Bathroom Renovations</h1>
         <h2 class="subheading mb-4">We Specializes in Improving Bathrooms to Create a Relaxing and Refreshing Sanctuary.
         </h2>
@@ -13,124 +13,9 @@
             <span></span>
           </div>
         </a> -->
+        <a href="newleadintake"  target="_blank" class="btn btn-vary1" target="_blank">GET A FREE ESTIMATE</a>
       </div>
-      <div class="col-xl-5 col-lg-5  col-md-12 col-sm-12 col-12 ">
-        <div class="get-quote-form p-4 ">
-          <form #getaQuoteForm="ngForm" (ngSubmit)="quoteFormData(getaQuoteForm)" class="needs-validation"
-            novalidate="">
-            <div class="text-center mb-3">
-              <h4>GET A FREE ESTIMATE TODAY</h4>
-
-            </div>
-
-            <div class="row g-3">
-              <div class="col-sm-12 ">
-  
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control"  autocomplete="new-password" id="floatingInput" name="yourName" #yourNameRef="ngModel"
-                    ngModel required #nameInput />
-                  <label for="floatingInput">Your Name</label>
-  
-                </div>
-                <div *ngIf="yourNameRef.errors && (yourNameRef.dirty || yourNameRef.touched)"
-                  style="text-align:left; color:red;">
-                  <div [hidden]="!yourNameRef.errors">
-                    <p>&nbsp;Your Name is mandatory</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12">
-  
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control"  autocomplete="new-password" id="floatingInput" name="email" #emailAdderssRef="ngModel"
-                    ngModel required #emailInput  />
-                  <label for="floatingInput">Email</label>
-                </div>
-                <div *ngIf="emailAdderssRef.errors && (emailAdderssRef.dirty || emailAdderssRef.touched)"
-                  style="text-align:left; color:red;">
-                  <div [hidden]="!emailAdderssRef.errors">
-                    <p>&nbsp;Email is mandatory</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12">
-  
-                <div class="form-floating mb-3">
-  
-                  <input type="tel" class="form-control"  autocomplete="new-password" name="phoneNumber" id="phoneNumber" #phoneNumberRef="ngModel"
-                    ngModel [inputMask]="quotePhoneNumberInputMask" required #phoneInput>
-                  <label for="floatingInput">Phone Number</label>
-                </div>
-                <div *ngIf="phoneNumberRef.errors && (phoneNumberRef.dirty || phoneNumberRef.touched)"
-                  style="text-align:left; color:red;">
-                  <div [hidden]="!phoneNumberRef.errors">
-                    <p>&nbsp;Phone Number is mandatory</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-12">
-                <div class="form-floating mb-3">
-                  <input class="form-control" id="floatingInput"  autocomplete="new-password" ngx-google-places-autocomplete [options]="options"
-                    (onAddressChange)="handleAddressChange($event)" name="address" #addressRef="ngModel" ngModel
-                    required="" #addressInput />
-                  <label for="floatingInput">Address</label>
-                  <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
-                    <img src="../../../assets/img/powered-by-google-transparent.png" width="100" alt="" >
-                  </div>
-                </div>
-                <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)"
-                  style="text-align:left; color:red;">
-                  <div [hidden]="!addressRef.errors">
-                    <p>&nbsp;Address is mandatory</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-12">
-                <label for="">Renovation(s) Required</label>
-                
-                <div class="">
-  
-                
-
-                  <div class="form-check"  *ngFor="let asset of assets">
-                    <input class="form-check-input" type="checkbox" value="{{ asset }}"  id="{{asset}}"  (change)="onChange(asset)">
-                    <label class="form-check-label" for="{{asset}}">
-                      {{asset}}
-                    </label>
-                  </div>
-
-                <!-- <div class="form-floating">
-  
-                  <select class="form-select " name="serviceReq" id="floatingSelect"
-                    aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
-  
-                    <option *ngFor="let opt of this.getAQuoteServicesReq" [value]="opt.label"
-                      [selected]="opt.status == true" [disabled]="opt.label == 'Choose From Below'">
-                      {{opt.label}}</option>
-                  </select>
-                  <div id="renovationReq">
-                    <span class="pe-2 me-2" *ngFor="let revReq of this.selectedServiceRequiredGetQuote; let ind = index"
-                      id="removeRev{{ind}}" id="">{{revReq}} <i class="fa fa-trash" aria-hidden="true"
-                        (click)="removeRev(ind,revReq)"></i></span>
-                  </div>
-  
-                  <label for="floatingSelect">Renovation(s) Required</label> -->
-  
-                </div>
-  
-              </div>
-              <button type="submit" class="btn btn-vary1 mt-3" [disabled]="!getaQuoteForm.form.valid || this.all_selected_values.length == 0">GET A FREE
-                ESTIMATE</button>
-            </div>
-
-          </form>
-        </div>
-        <div class="free-quote-modal">
-          <a href="bathroom/get-free-quote"  class="btn btn-vary1 ">Free consultation</a>
-        </div>
-      </div>
+    
     </div>
   </div>
 </section>
@@ -147,7 +32,7 @@
           meeting at one of their design centers to work with their designer and get a comprehensive estimate.
         </p>
 
-        <a href="bathroom/get-free-quote" class="btn btn-vary1 mt-3">Get Started</a>
+        <a href="newleadintake" class="btn btn-vary1 mt-3">Get Started</a>
       </div>
     </div>
   </div>
@@ -207,7 +92,7 @@
 
             </li>
           </ul>
-          <a href="bathroom/get-free-quote" class="btn btn-vary1 mt-3">GET A FREE ESTIMATE</a>
+          <a href="newleadintake" class="btn btn-vary1 mt-3">GET A FREE ESTIMATE</a>
         </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center">
